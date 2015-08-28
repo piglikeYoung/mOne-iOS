@@ -7,8 +7,8 @@
 //
 
 
-// 屏幕横屏时的宽度
-extern const NSInteger padding;
+// 控件默认间隔
+extern const NSInteger kPadding;
 
 // NavigationBarH
 extern const CGFloat kNavigationBarH;

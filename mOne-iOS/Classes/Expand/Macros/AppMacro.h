@@ -40,9 +40,7 @@
 // 全局背景色
 #define JHGlobalBg JHColor(211, 211, 211)
 
-
-// 导航栏标题的字体
-#define JHNavigationTitleFont [UIFont boldSystemFontOfSize:20]
+#define JHNightBGViewColor JHColor(38, 38, 38) // #262626
 
 
 

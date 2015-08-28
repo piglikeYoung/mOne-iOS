@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 piglikeyoung. All rights reserved.
 //
 
-const NSInteger padding = 10;
 
+const NSInteger kPadding = 10;
 
 // NavigationBarH
 const CGFloat kNavigationBarH = 64.f;
