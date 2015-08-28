@@ -37,6 +37,12 @@
 		7DE87C971B90945C009AB8AB /* JHReadingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C961B90945C009AB8AB /* JHReadingInfo.m */; };
 		7DE87C9B1B9094C4009AB8AB /* JHQuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C9A1B9094C4009AB8AB /* JHQuestionInfo.m */; };
 		7DE87C9F1B90950A009AB8AB /* JHThingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C9E1B90950A009AB8AB /* JHThingInfo.m */; };
+		7DE87CA21B9095A6009AB8AB /* JHHomeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CA11B9095A6009AB8AB /* JHHomeTool.m */; };
+		7DE87CA61B90969D009AB8AB /* JHBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CA51B90969D009AB8AB /* JHBaseParam.m */; };
+		7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CA81B909749009AB8AB /* JHBaseResult.m */; };
+		7DE87CAC1B90980E009AB8AB /* JHHomeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CAB1B90980E009AB8AB /* JHHomeParam.m */; };
+		7DE87CAF1B909823009AB8AB /* JHHomeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CAE1B909823009AB8AB /* JHHomeResult.m */; };
+		7DE87CB31B909D54009AB8AB /* JHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CB21B909D54009AB8AB /* JHTimeTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +116,18 @@
 		7DE87C9A1B9094C4009AB8AB /* JHQuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionInfo.m; sourceTree = "<group>"; };
 		7DE87C9D1B90950A009AB8AB /* JHThingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingInfo.h; sourceTree = "<group>"; };
 		7DE87C9E1B90950A009AB8AB /* JHThingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingInfo.m; sourceTree = "<group>"; };
+		7DE87CA01B9095A6009AB8AB /* JHHomeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeTool.h; sourceTree = "<group>"; };
+		7DE87CA11B9095A6009AB8AB /* JHHomeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeTool.m; sourceTree = "<group>"; };
+		7DE87CA41B90969D009AB8AB /* JHBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBaseParam.h; sourceTree = "<group>"; };
+		7DE87CA51B90969D009AB8AB /* JHBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBaseParam.m; sourceTree = "<group>"; };
+		7DE87CA71B909749009AB8AB /* JHBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBaseResult.h; sourceTree = "<group>"; };
+		7DE87CA81B909749009AB8AB /* JHBaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBaseResult.m; sourceTree = "<group>"; };
+		7DE87CAA1B90980E009AB8AB /* JHHomeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeParam.h; sourceTree = "<group>"; };
+		7DE87CAB1B90980E009AB8AB /* JHHomeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeParam.m; sourceTree = "<group>"; };
+		7DE87CAD1B909823009AB8AB /* JHHomeResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeResult.h; sourceTree = "<group>"; };
+		7DE87CAE1B909823009AB8AB /* JHHomeResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeResult.m; sourceTree = "<group>"; };
+		7DE87CB11B909D54009AB8AB /* JHTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTimeTool.h; sourceTree = "<group>"; };
+		7DE87CB21B909D54009AB8AB /* JHTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTimeTool.m; sourceTree = "<group>"; };
 		85C5C47FABAF70C194B794C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA07120AD01F4B8ED12E3109 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,6 +252,10 @@
 				7DE87C941B90943E009AB8AB /* Reading */,
 				7DE87C981B909498009AB8AB /* Question */,
 				7DE87C9C1B9094E9009AB8AB /* Thing */,
+				7DE87CA41B90969D009AB8AB /* JHBaseParam.h */,
+				7DE87CA51B90969D009AB8AB /* JHBaseParam.m */,
+				7DE87CA71B909749009AB8AB /* JHBaseResult.h */,
+				7DE87CA81B909749009AB8AB /* JHBaseResult.m */,
 			);
 			name = "Models(模型)";
 			path = Models;
@@ -259,6 +281,7 @@
 		7DE2F27D1B9010B900F287B7 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE87CB01B909D21009AB8AB /* TimeTool */,
 				7DE87C861B90913B009AB8AB /* HttpTool */,
 			);
 			name = "Tools(工具)";
@@ -417,6 +440,8 @@
 				7DE87C881B90915D009AB8AB /* JHHttpTool.m */,
 				7DE87C8D1B909257009AB8AB /* JHBaseTool.h */,
 				7DE87C8E1B909257009AB8AB /* JHBaseTool.m */,
+				7DE87CA01B9095A6009AB8AB /* JHHomeTool.h */,
+				7DE87CA11B9095A6009AB8AB /* JHHomeTool.m */,
 			);
 			path = HttpTool;
 			sourceTree = "<group>";
@@ -426,6 +451,10 @@
 			children = (
 				7DE87C911B9093EB009AB8AB /* JHHomeInfo.h */,
 				7DE87C921B9093EB009AB8AB /* JHHomeInfo.m */,
+				7DE87CAA1B90980E009AB8AB /* JHHomeParam.h */,
+				7DE87CAB1B90980E009AB8AB /* JHHomeParam.m */,
+				7DE87CAD1B909823009AB8AB /* JHHomeResult.h */,
+				7DE87CAE1B909823009AB8AB /* JHHomeResult.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -455,6 +484,15 @@
 				7DE87C9E1B90950A009AB8AB /* JHThingInfo.m */,
 			);
 			path = Thing;
+			sourceTree = "<group>";
+		};
+		7DE87CB01B909D21009AB8AB /* TimeTool */ = {
+			isa = PBXGroup;
+			children = (
+				7DE87CB11B909D54009AB8AB /* JHTimeTool.h */,
+				7DE87CB21B909D54009AB8AB /* JHTimeTool.m */,
+			);
+			path = TimeTool;
 			sourceTree = "<group>";
 		};
 		F6B3A07FBEFD6F393CEF0A41 /* Frameworks */ = {
@@ -600,15 +638,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE87CAF1B909823009AB8AB /* JHHomeResult.m in Sources */,
 				7DE2F2971B902D4600F287B7 /* AppConst.m in Sources */,
 				7DE2F2921B9012E900F287B7 /* main.m in Sources */,
+				7DE87CA61B90969D009AB8AB /* JHBaseParam.m in Sources */,
 				7DE87C8F1B909257009AB8AB /* JHBaseTool.m in Sources */,
 				7DE2F2B41B903B0500F287B7 /* DSNavigationBar.m in Sources */,
+				7DE87CB31B909D54009AB8AB /* JHTimeTool.m in Sources */,
 				7DE87C891B90915D009AB8AB /* JHHttpTool.m in Sources */,
 				7DE2F2911B9012E900F287B7 /* AppDelegate.m in Sources */,
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
 				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
+				7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */,
 				7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */,
 				7DE2F2B01B90376800F287B7 /* UIImage+Extension.m in Sources */,
 				7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */,
@@ -617,8 +659,10 @@
 				7DE87C931B9093EB009AB8AB /* JHHomeInfo.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
 				7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */,
+				7DE87CA21B9095A6009AB8AB /* JHHomeTool.m in Sources */,
 				7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */,
 				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
+				7DE87CAC1B90980E009AB8AB /* JHHomeParam.m in Sources */,
 				7DE87C971B90945C009AB8AB /* JHReadingInfo.m in Sources */,
 				7DE87C9B1B9094C4009AB8AB /* JHQuestionInfo.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,

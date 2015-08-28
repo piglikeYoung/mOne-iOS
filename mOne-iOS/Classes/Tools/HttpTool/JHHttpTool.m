@@ -41,7 +41,8 @@
 {
     // 1.获得请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    mgr.requestSerializer = [AFJSONRequestSerializer serializer];
+    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
     
     // 2.发送GET请求
     [mgr GET:url parameters:params
@@ -60,7 +61,8 @@
 {
     // 1.获得请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    mgr.requestSerializer = [AFJSONRequestSerializer serializer];
+    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
     
     
     // 2.发送POST请求
@@ -81,8 +83,9 @@
 {
 //    // 1.获得请求管理者
 //    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-////    mgr.requestSerializer = [AFJSONRequestSerializer serializer];
-//    
+//    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+//    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
+//
 //    // 2.发送POST请求
 //    [mgr POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 //        for (XQFormData *IformData in formDataArray) {

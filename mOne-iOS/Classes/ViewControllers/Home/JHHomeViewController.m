@@ -9,6 +9,10 @@
 #import "JHHomeViewController.h"
 #import "iCarousel.h"
 #import "JHHomeView.h"
+#import "JHHomeTool.h"
+#import "JHHomeParam.h"
+#import "JHHomeResult.h"
+#import "JHHomeInfo.h"
 
 static const CGFloat kLabelOffsetX = 20.f;
 
@@ -68,10 +72,10 @@ static const CGFloat kLabelOffsetX = 20.f;
 - (NSMutableArray *)items {
     if (!_items) {
         _items = [NSMutableArray array];
-        for (int i = 0; i < 10; i++) {
-            JHHomeView *homeView = [[JHHomeView alloc] initWithFrame:CGRectMake(0, 0, JHScreenW, JHScreenH - kNavigationBarH - kTableBarH)];
-            [_items addObject:homeView];
-        }
+//        for (int i = 0; i < 10; i++) {
+//            JHHomeView *homeView = [[JHHomeView alloc] initWithFrame:CGRectMake(0, 0, JHScreenW, JHScreenH - kNavigationBarH - kTableBarH)];
+//            [_items addObject:homeView];
+//        }
     }
     return _items;
 }
@@ -105,7 +109,53 @@ static const CGFloat kLabelOffsetX = 20.f;
     self.leftRefreshLabel = leftRefreshLabel;
     
     [self.carousel addSubview:leftRefreshLabel];
+    
+    
+    
+    
 }
+
+#pragma mark - Request
+- (void)requestHomeContentAtIndex:(NSNumber *)index {
+    
+    JHHomeParam *param = [JHHomeParam param];
+    param.index = index;
+    [JHHomeTool homeContentWithParam:param success:^(JHHomeResult *result) {
+        if ([result.result isEqualToString:kSuccessFlag]) {
+            if (self.isRefreshing) {
+                [self endRefreshing];
+                // 刷新的数据和之前获取的数据比较
+                if ([result.hpEntity.strHpId isEqualToString:((JHHomeInfo *)self.items[0]).strHpId]) {
+                    
+                    // 没有最新数据
+                    [MBProgressHUD showMessage:kNoLatestData toView:self.view];
+                } else {// 有新数据
+                    // 删掉所有的已读数据，不用考虑第一个已读数据和最新数据之间相差几天，简单粗暴
+                    [_items removeAllObjects];
+                    // 添加到数组
+                    [_items addObject:result.hpEntity];
+                    // 刷新carousel
+                    [self.carousel reloadData];
+                    [MBProgressHUD hideHUD];
+                }
+                
+                
+            } else {
+                [MBProgressHUD hideHUD];
+                
+            }
+        }
+    } failure:^(NSError *error) {
+        JHLog(@"%@", error);
+    }];
+}
+
+#pragma mark - Private
+- (void)endRefreshing {
+    _refreshing = NO;
+
+}
+
 
 
 #pragma mark - iCarouselDataSource
