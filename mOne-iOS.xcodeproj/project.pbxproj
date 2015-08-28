@@ -23,6 +23,9 @@
 		7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2AC1B9036CB00F287B7 /* JHBaseViewController.m */; };
 		7DE2F2B01B90376800F287B7 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2AF1B90376800F287B7 /* UIImage+Extension.m */; };
 		7DE2F2B41B903B0500F287B7 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2B31B903B0500F287B7 /* DSNavigationBar.m */; };
+		7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2B71B903F0200F287B7 /* JHHomeViewController.m */; };
+		7DE2F2BC1B903F4800F287B7 /* JHReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2BB1B903F4800F287B7 /* JHReadingViewController.m */; };
+		7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2C01B903FA900F287B7 /* JHThingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		7DE2F2AF1B90376800F287B7 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		7DE2F2B21B903B0500F287B7 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNavigationBar.h; sourceTree = "<group>"; };
 		7DE2F2B31B903B0500F287B7 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
+		7DE2F2B61B903F0200F287B7 /* JHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeViewController.h; sourceTree = "<group>"; };
+		7DE2F2B71B903F0200F287B7 /* JHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeViewController.m; sourceTree = "<group>"; };
+		7DE2F2BA1B903F4800F287B7 /* JHReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingViewController.h; sourceTree = "<group>"; };
+		7DE2F2BB1B903F4800F287B7 /* JHReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingViewController.m; sourceTree = "<group>"; };
+		7DE2F2BF1B903FA900F287B7 /* JHThingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingViewController.h; sourceTree = "<group>"; };
+		7DE2F2C01B903FA900F287B7 /* JHThingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingViewController.m; sourceTree = "<group>"; };
 		85C5C47FABAF70C194B794C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA07120AD01F4B8ED12E3109 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,7 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				7DE2F2AA1B90368300F287B7 /* BaseViewController */,
+				7DE2F2B91B903F0C00F287B7 /* Reading(文章) */,
 				7DE2F2B51B903E9000F287B7 /* Home(首页) */,
+				7DE2F2BD1B903F4D00F287B7 /* Question(问题) */,
+				7DE2F2BE1B903F7300F287B7 /* Thing(东西) */,
+				7DE2F2C21B903FB900F287B7 /* Personal(个人) */,
 			);
 			name = "ViewControllers(控制器)";
 			path = ViewControllers;
@@ -304,9 +317,47 @@
 		7DE2F2B51B903E9000F287B7 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2F2B61B903F0200F287B7 /* JHHomeViewController.h */,
+				7DE2F2B71B903F0200F287B7 /* JHHomeViewController.m */,
 			);
 			name = "Home(首页)";
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7DE2F2B91B903F0C00F287B7 /* Reading(文章) */ = {
+			isa = PBXGroup;
+			children = (
+				7DE2F2BA1B903F4800F287B7 /* JHReadingViewController.h */,
+				7DE2F2BB1B903F4800F287B7 /* JHReadingViewController.m */,
+			);
+			name = "Reading(文章)";
+			path = Reading;
+			sourceTree = "<group>";
+		};
+		7DE2F2BD1B903F4D00F287B7 /* Question(问题) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Question(问题)";
+			path = Question;
+			sourceTree = "<group>";
+		};
+		7DE2F2BE1B903F7300F287B7 /* Thing(东西) */ = {
+			isa = PBXGroup;
+			children = (
+				7DE2F2BF1B903FA900F287B7 /* JHThingViewController.h */,
+				7DE2F2C01B903FA900F287B7 /* JHThingViewController.m */,
+			);
+			name = "Thing(东西)";
+			path = Thing;
+			sourceTree = "<group>";
+		};
+		7DE2F2C21B903FB900F287B7 /* Personal(个人) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Personal(个人)";
+			path = Personal;
 			sourceTree = "<group>";
 		};
 		F6B3A07FBEFD6F393CEF0A41 /* Frameworks */ = {
@@ -460,9 +511,12 @@
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
 				7DE2F2B01B90376800F287B7 /* UIImage+Extension.m in Sources */,
+				7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
+				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,
 				7DE2F2A91B90300500F287B7 /* UIView+Extension.m in Sources */,
+				7DE2F2BC1B903F4800F287B7 /* JHReadingViewController.m in Sources */,
 				7DE2F2A31B902F8A00F287B7 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
