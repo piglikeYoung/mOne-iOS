@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "JHTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -21,10 +23,13 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
+    
+    JHTabBarController *rootTabBar = [[JHTabBarController alloc] init];
+    
+    self.window.rootViewController = rootTabBar;
+    
     // 2.显示窗口
     [self.window makeKeyAndVisible];
-    
-    
     
     return YES;
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		102099A8D2C0DA652DCCB877 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA07120AD01F4B8ED12E3109 /* libPods.a */; };
-		7DE2F25D1B900ED900F287B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2F25B1B900ED900F287B7 /* Main.storyboard */; };
 		7DE2F25F1B900ED900F287B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2F25E1B900ED900F287B7 /* Images.xcassets */; };
 		7DE2F2621B900ED900F287B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2F2601B900ED900F287B7 /* LaunchScreen.xib */; };
 		7DE2F26E1B900ED900F287B7 /* mOne_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F26D1B900ED900F287B7 /* mOne_iOSTests.m */; };
@@ -26,6 +25,10 @@
 		7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2B71B903F0200F287B7 /* JHHomeViewController.m */; };
 		7DE2F2BC1B903F4800F287B7 /* JHReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2BB1B903F4800F287B7 /* JHReadingViewController.m */; };
 		7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2C01B903FA900F287B7 /* JHThingViewController.m */; };
+		7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2C41B9040DE00F287B7 /* JHQuestionViewController.m */; };
+		7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2C71B9040EF00F287B7 /* JHPersonalViewController.m */; };
+		7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */; };
+		7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,6 @@
 		633A04CD09C5DAACDC164EF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7DE2F24E1B900ED900F287B7 /* mOne-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mOne-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2F2521B900ED900F287B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DE2F25C1B900ED900F287B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DE2F25E1B900ED900F287B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7DE2F2611B900ED900F287B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7DE2F2671B900ED900F287B7 /* mOne-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mOne-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,14 @@
 		7DE2F2BB1B903F4800F287B7 /* JHReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingViewController.m; sourceTree = "<group>"; };
 		7DE2F2BF1B903FA900F287B7 /* JHThingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingViewController.h; sourceTree = "<group>"; };
 		7DE2F2C01B903FA900F287B7 /* JHThingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingViewController.m; sourceTree = "<group>"; };
+		7DE2F2C31B9040DE00F287B7 /* JHQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHQuestionViewController.h; sourceTree = "<group>"; };
+		7DE2F2C41B9040DE00F287B7 /* JHQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionViewController.m; sourceTree = "<group>"; };
+		7DE2F2C61B9040EF00F287B7 /* JHPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPersonalViewController.h; sourceTree = "<group>"; };
+		7DE2F2C71B9040EF00F287B7 /* JHPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPersonalViewController.m; sourceTree = "<group>"; };
+		7DE2F2C91B90417A00F287B7 /* JHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHNavigationController.h; sourceTree = "<group>"; };
+		7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHNavigationController.m; sourceTree = "<group>"; };
+		7DE2F2CC1B90496F00F287B7 /* JHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTabBarController.h; sourceTree = "<group>"; };
+		7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTabBarController.m; sourceTree = "<group>"; };
 		85C5C47FABAF70C194B794C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA07120AD01F4B8ED12E3109 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				7DE2F2771B900F5400F287B7 /* Classes */,
-				7DE2F25B1B900ED900F287B7 /* Main.storyboard */,
 				7DE2F25E1B900ED900F287B7 /* Images.xcassets */,
 				7DE2F2601B900ED900F287B7 /* LaunchScreen.xib */,
 				7DE2F2511B900ED900F287B7 /* Supporting Files */,
@@ -184,8 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				7DE2F2AA1B90368300F287B7 /* BaseViewController */,
-				7DE2F2B91B903F0C00F287B7 /* Reading(文章) */,
 				7DE2F2B51B903E9000F287B7 /* Home(首页) */,
+				7DE2F2B91B903F0C00F287B7 /* Reading(文章) */,
 				7DE2F2BD1B903F4D00F287B7 /* Question(问题) */,
 				7DE2F2BE1B903F7300F287B7 /* Thing(东西) */,
 				7DE2F2C21B903FB900F287B7 /* Personal(个人) */,
@@ -299,6 +308,10 @@
 		7DE2F2AA1B90368300F287B7 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2F2C91B90417A00F287B7 /* JHNavigationController.h */,
+				7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */,
+				7DE2F2CC1B90496F00F287B7 /* JHTabBarController.h */,
+				7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */,
 				7DE2F2AB1B9036CB00F287B7 /* JHBaseViewController.h */,
 				7DE2F2AC1B9036CB00F287B7 /* JHBaseViewController.m */,
 			);
@@ -337,6 +350,8 @@
 		7DE2F2BD1B903F4D00F287B7 /* Question(问题) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2F2C31B9040DE00F287B7 /* JHQuestionViewController.h */,
+				7DE2F2C41B9040DE00F287B7 /* JHQuestionViewController.m */,
 			);
 			name = "Question(问题)";
 			path = Question;
@@ -355,6 +370,8 @@
 		7DE2F2C21B903FB900F287B7 /* Personal(个人) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2F2C61B9040EF00F287B7 /* JHPersonalViewController.h */,
+				7DE2F2C71B9040EF00F287B7 /* JHPersonalViewController.m */,
 			);
 			name = "Personal(个人)";
 			path = Personal;
@@ -451,7 +468,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DE2F25D1B900ED900F287B7 /* Main.storyboard in Resources */,
 				7DE2F2621B900ED900F287B7 /* LaunchScreen.xib in Resources */,
 				7DE2F25F1B900ED900F287B7 /* Images.xcassets in Resources */,
 			);
@@ -510,9 +526,13 @@
 				7DE2F2911B9012E900F287B7 /* AppDelegate.m in Sources */,
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
+				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
+				7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */,
 				7DE2F2B01B90376800F287B7 /* UIImage+Extension.m in Sources */,
 				7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */,
+				7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
+				7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */,
 				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,
 				7DE2F2A91B90300500F287B7 /* UIView+Extension.m in Sources */,
@@ -540,14 +560,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7DE2F25B1B900ED900F287B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DE2F25C1B900ED900F287B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7DE2F2601B900ED900F287B7 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
