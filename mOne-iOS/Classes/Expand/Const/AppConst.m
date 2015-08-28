@@ -15,3 +15,7 @@ const CGFloat kNavigationBarH = 64.f;
 const CGFloat kTableBarH = 49.f;
 // TableViewCellH
 const CGFloat kTableViewCellH = 44.f;
+
+NSString *const kLeftDragToRightForRefreshHintText = @"右拉刷新...";
+NSString *const kLeftReleaseToRefreshHintText = @"松开刷新数据...";
+NSString *const kLeftReleaseIsRefreshingHintText = @"正在载入...";

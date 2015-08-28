@@ -16,3 +16,8 @@ extern const CGFloat kNavigationBarH;
 extern const CGFloat kTableBarH;
 // TableViewCellH
 extern const CGFloat kTableViewCellH;
+
+
+extern NSString *const kLeftDragToRightForRefreshHintText;
+extern NSString *const kLeftReleaseToRefreshHintText;
+extern NSString *const kLeftReleaseIsRefreshingHintText;

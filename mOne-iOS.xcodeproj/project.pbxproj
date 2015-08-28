@@ -29,6 +29,7 @@
 		7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2C71B9040EF00F287B7 /* JHPersonalViewController.m */; };
 		7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */; };
 		7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */; };
+		7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHNavigationController.m; sourceTree = "<group>"; };
 		7DE2F2CC1B90496F00F287B7 /* JHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTabBarController.h; sourceTree = "<group>"; };
 		7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTabBarController.m; sourceTree = "<group>"; };
+		7DE2F2D21B906B0E00F287B7 /* JHHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeView.h; sourceTree = "<group>"; };
+		7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeView.m; sourceTree = "<group>"; };
 		85C5C47FABAF70C194B794C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA07120AD01F4B8ED12E3109 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -239,6 +242,8 @@
 		7DE2F27E1B9010D500F287B7 /* View(自定义视图) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2F2D21B906B0E00F287B7 /* JHHomeView.h */,
+				7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */,
 			);
 			name = "View(自定义视图)";
 			path = View;
@@ -532,6 +537,7 @@
 				7DE2F2B81B903F0200F287B7 /* JHHomeViewController.m in Sources */,
 				7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
+				7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */,
 				7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */,
 				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,
