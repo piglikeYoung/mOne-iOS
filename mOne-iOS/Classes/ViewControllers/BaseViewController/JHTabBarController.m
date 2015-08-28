@@ -119,7 +119,7 @@
     
     // 添加为tabbar控制器的子控制器
     JHNavigationController *nav = [[JHNavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
-    [nav.navigationBar setOpaque:YES];
+    
     [nav addChildViewController:childVc];
     [self addChildViewController:nav];
 }

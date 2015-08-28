@@ -7,6 +7,7 @@
 //
 
 #import "JHNavigationController.h"
+#import "UIBarButtonItem+Extension.h"
 
 @interface JHNavigationController ()
 
@@ -32,6 +33,7 @@
     
     // 清空弹出手势的代理，就可以恢复弹出手势
     self.interactivePopGestureRecognizer.delegate = nil;
+    
 }
 
 /**
@@ -108,7 +110,19 @@
     [appearance setTintColor:JHColorRGBA(100, 100, 100, 0.9)];
 }
 
-
+// 拦截每次添加子控制器
+- (void)addChildViewController:(UIViewController *)childController {
+    
+    // 显示导航栏上的《一个》图标
+    childController.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navLogo"]];
+    
+    // 初始化导航栏右侧的分享按钮
+    UIBarButtonItem *shareItem = [UIBarButtonItem itemWithImageName:@"nav_share_btn_normal" highImageName:@"nav_share_btn_highlighted" target:self action:@selector(shareItemClick)];
+    
+    childController.navigationItem.rightBarButtonItem = shareItem;
+    
+    [super addChildViewController:childController];
+}
 
 /**
  *  能拦截所有push进来的子控制器
@@ -118,10 +132,6 @@
     // 只有第一次push的控制器显示bottomBar，别的都隐藏
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
-        
-        // 导航栏的左上角和右上角按钮
-//        viewController.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(back)];
-//        viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:(]UIBarButtonSystemItem target:<#(id)#> action:<#(SEL)#>];
     }
     
     [super pushViewController:viewController animated:animated];
@@ -129,6 +139,10 @@
 
 - (void)back {
     [self popViewControllerAnimated:YES];
+}
+
+- (void) shareItemClick {
+    
 }
 
 

@@ -23,6 +23,9 @@
     self.view.nightBackgroundColor = JHNightBGViewColor;
     // 设置标题栏不能覆盖下面viewcontroller的内容
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
+
 }
 
 
