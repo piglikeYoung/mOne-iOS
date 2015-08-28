@@ -43,8 +43,26 @@
 // 导航栏标题的字体
 #define JHNavigationTitleFont [UIFont boldSystemFontOfSize:20]
 
-#define JHNightBGViewColor JHColor(38, 38, 38) // #262626
+// App 主题模式是否开启夜间模式
+#define APP_THEME_NIGHT_MODE @"Night_Mode_Is_On"
 
+// Controller的View的背景色
+// 夜间模式
+#define JHNightBGViewColor JHColor(38, 38, 39) // #262626
+// 日常模式
+#define JHDawnBGViewColor  [UIColor whiteColor]// #白色
+
+// NavigationBar的背景色
+// 夜间模式
+#define JHNightNavigationBarColor JHColor(32, 32, 34) // #202020
+// 日常模式
+#define JHDawnNavigationBarColor JHColor(236, 236, 236) // #ECECEC
+
+// TabBar的背景色
+// 夜间模式
+#define JHNightTabBarColor JHColor(48, 48, 49)
+// 日常模式
+#define JHDawnTabBarColor JHColor(240, 240, 240)
 
 
 #endif

@@ -13,6 +13,8 @@
 #import "JHQuestionViewController.h"
 #import "JHThingViewController.h"
 #import "JHPersonalViewController.h"
+#import "DSNavigationBar.h"
+#import "UIImage+Extension.h"
 
 @interface JHTabBarController ()<UITabBarControllerDelegate>
 
@@ -26,11 +28,25 @@
     self.delegate = self;
     
     self.tabBar.tintColor = JHColor(55, 196, 242);
-    self.tabBar.barTintColor = JHColor(239, 239, 239);
-    self.tabBar.backgroundColor = [UIColor clearColor];
     
     // 添加所有的子控制器
     [self addAllChildVcs];
+    
+    // 开启了夜间模式
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
+        [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
+        
+        self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
+        
+        [DKNightVersionManager nightFalling];
+
+    }
+    // 未开启
+    else {
+        [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
+        
+        self.tabBar.backgroundImage = [UIImage imageWithColor:JHDawnTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
+    }
 }
 
 /**
@@ -95,14 +111,16 @@
     
     // 在iOS7中, 会对selectedImage的图片进行再次渲染为蓝色
     // 要想显示原图, 就必须得告诉它: 不要渲染
-    if (iOS7) {
-        // 声明这张图片用原图(别渲染)
-        selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
+//    if (iOS7) {
+//        // 声明这张图片用原图(别渲染)
+//        selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    }
     childVc.tabBarItem.selectedImage = selectedImage;
     
     // 添加为tabbar控制器的子控制器
-    JHNavigationController *nav = [[JHNavigationController alloc] initWithRootViewController:childVc];
+    JHNavigationController *nav = [[JHNavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
+    [nav.navigationBar setOpaque:YES];
+    [nav addChildViewController:childVc];
     [self addChildViewController:nav];
 }
 

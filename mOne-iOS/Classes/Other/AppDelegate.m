@@ -25,7 +25,6 @@
     
     
     JHTabBarController *rootTabBar = [[JHTabBarController alloc] init];
-    
     self.window.rootViewController = rootTabBar;
     
     // 2.显示窗口
