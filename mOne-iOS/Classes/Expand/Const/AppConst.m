@@ -25,3 +25,5 @@ NSString *const kServerUrl = @"http://bea.wufazhuce.com/OneForWeb/one";
 NSString *const kSuccessFlag = @"SUCCESS";
 
 NSString *const kNoLatestData = @"已是最新数据";
+
+const NSTimeInterval kDefaultAnimationDuration = 0.2;

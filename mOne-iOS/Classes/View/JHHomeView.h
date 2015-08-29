@@ -12,13 +12,6 @@
 
 @interface JHHomeView : UIView
 
-/**
- *  按照给定的数据显示视图
- *
- *  @param homeEntity 要显示的数据
- *  @param animated   是否需要图片的加载动画
- */
-- (void)configureViewWithHomeEntity:(JHHomeInfo *)homeInfo animated:(BOOL)animated;
 
 @property (nonatomic, weak) JHHomeInfo *homeInfo;
 

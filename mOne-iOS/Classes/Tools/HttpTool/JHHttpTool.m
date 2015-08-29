@@ -8,7 +8,7 @@
 
 #import "JHHttpTool.h"
 #import "AFNetworking.h"
-#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD+JH.h"
 
 @implementation JHHttpTool
 

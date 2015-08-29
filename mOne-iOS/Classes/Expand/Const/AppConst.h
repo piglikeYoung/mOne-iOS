@@ -32,3 +32,6 @@ extern NSString *const kSuccessFlag;
 
 // 已是最新数据
 extern NSString *const kNoLatestData;
+
+// 默认动画时长
+extern const NSTimeInterval kDefaultAnimationDuration;

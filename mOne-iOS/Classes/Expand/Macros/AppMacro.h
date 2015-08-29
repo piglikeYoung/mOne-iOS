@@ -78,6 +78,8 @@
 #define JHMonthAndYearTextColor JHColor(173, 173, 173)// #ADADAD
 // 点赞按钮字体颜色
 #define JHPraiseBtnTextColor JHColor(80, 80, 80)// #505050
+// 右拉刷新字体颜色
+#define JHLeftRefreshLabelTextColor JHColor(90, 91, 92)// #5A5B5C
 
 // 加载图片圈圈颜色
 #define LoadingCircleColor JHColor(132, 132, 132) // #848484

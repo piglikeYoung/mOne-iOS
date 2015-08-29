@@ -16,22 +16,8 @@
 
 static const CGFloat kLabelOffsetX = 20.f;
 
-#define LeftRefreshLabelTextColor JHColor(90, 91, 92)// #5A5B5C
-
 @interface JHHomeViewController ()<iCarouselDataSource, iCarouselDelegate>
 
-/**
- *  当前一共有多少篇文章，默认为3篇
- */
-@property (nonatomic, assign) NSInteger numberOfItems;
-/**
- *  保存当前查看过的数据
- */
-@property (nonatomic, weak) NSMutableDictionary *readItems;
-/**
- *  最后展示的 item 的下标
- */
-@property (nonatomic, assign) NSInteger lastSelectedItemIndex;
 /**
  *  当前是否正在右拉刷新标记
  */
@@ -47,15 +33,15 @@ static const CGFloat kLabelOffsetX = 20.f;
  */
 @property (weak, nonatomic) UILabel *leftRefreshLabel;
 
-
-// 保存当 leftRefreshLabel 的 text 为“右拉刷新...”时的宽，在右拉的时候用到
-@property (nonatomic, assign) CGFloat leftRefreshLabelWidth;
 // 标记是否需要刷新，默认为 NO
 @property (nonatomic, assign, getter=isNeedRefresh) BOOL needRefresh;
+
 // 保存右拉的 x 距离
 @property (nonatomic, assign) CGFloat draggedX;
+
 // 标记是否能够 scroll back，用在刷新的时候不改变 leftRefreshLabel 的 frame，默认为 YES
 @property (nonatomic, assign, getter=isCanScrollBack) BOOL canScrollBack;
+
 // 最后一次显示的 item 的下标
 @property (nonatomic, assign) NSInteger lastItemIndex;
 
@@ -63,6 +49,11 @@ static const CGFloat kLabelOffsetX = 20.f;
  *  存放数据的数组
  */
 @property (nonatomic, strong) NSMutableArray *items;
+
+/**
+ *  item 加载中转转的菊花
+ */
+@property (weak, nonatomic) UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -72,10 +63,6 @@ static const CGFloat kLabelOffsetX = 20.f;
 - (NSMutableArray *)items {
     if (!_items) {
         _items = [NSMutableArray array];
-//        for (int i = 0; i < 10; i++) {
-//            JHHomeView *homeView = [[JHHomeView alloc] initWithFrame:CGRectMake(0, 0, JHScreenW, JHScreenH - kNavigationBarH - kTableBarH)];
-//            [_items addObject:homeView];
-//        }
     }
     return _items;
 }
@@ -100,17 +87,33 @@ static const CGFloat kLabelOffsetX = 20.f;
     // 左侧刷新label
     UILabel *leftRefreshLabel = [[UILabel alloc] init];
     leftRefreshLabel.font = [UIFont systemFontOfSize:10.0f];
-    leftRefreshLabel.textColor = LeftRefreshLabelTextColor;
-    leftRefreshLabel.nightTextColor = LeftRefreshLabelTextColor;
+    leftRefreshLabel.textColor = JHLeftRefreshLabelTextColor;
+    leftRefreshLabel.nightTextColor = JHLeftRefreshLabelTextColor;
     leftRefreshLabel.textAlignment = NSTextAlignmentRight;
     leftRefreshLabel.text = kLeftDragToRightForRefreshHintText;
-    CGSize size = [_leftRefreshLabel.text sizeWithFont:leftRefreshLabel.font maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT)];
+    CGSize size = [leftRefreshLabel.text sizeWithFont:leftRefreshLabel.font maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT)];
     leftRefreshLabel.frame = CGRectMake(0 - size.width * 1.5 - kLabelOffsetX, carousel.centerY, size.width * 1.5, size.height);
+    leftRefreshLabel.hidden = YES;
     self.leftRefreshLabel = leftRefreshLabel;
     
-    [self.carousel addSubview:leftRefreshLabel];
+    [self.carousel.contentView addSubview:leftRefreshLabel];
+    
+    
+    // 初始化加载中的菊花控件
+    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicatorView.hidesWhenStopped = YES;
+    indicatorView.center = self.carousel.center;
+    if (Is_Night_Mode) {
+        indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    } else {
+        indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    }
+    [indicatorView startAnimating];
+    self.indicatorView = indicatorView;
+    [self.view addSubview:indicatorView];
     
     self.refreshing = YES;
+    self.canScrollBack = YES;
     [self requestHomeContentAtIndex:@(self.items.count)];
 }
 
@@ -122,14 +125,14 @@ static const CGFloat kLabelOffsetX = 20.f;
     [JHHomeTool homeContentWithParam:param success:^(JHHomeResult *result) {
         if ([result.result isEqualToString:kSuccessFlag]) {
             if (self.isRefreshing) {
-                [self endRefreshing];
+
                 // 之前有数据
                 if (self.items.count > 0) {
                     // 刷新的数据和之前获取的数据比较
                     if ([result.hpEntity.strHpId isEqualToString:((JHHomeInfo *)self.items[0]).strHpId]) {
                         
                         // 没有最新数据
-                        [MBProgressHUD showMessage:kNoLatestData toView:self.view];
+                        [MBProgressHUD showText:kNoLatestData delay:1.f];
                     } else {// 有新数据
                         // 删掉所有的已读数据，不用考虑第一个已读数据和最新数据之间相差几天，简单粗暴
                         [_items removeAllObjects];
@@ -137,7 +140,6 @@ static const CGFloat kLabelOffsetX = 20.f;
                         [_items addObject:result.hpEntity];
                         // 刷新carousel
                         [self.carousel reloadData];
-                        [MBProgressHUD hideHUD];
                     }
                 }
                 // 之前没数据
@@ -146,22 +148,49 @@ static const CGFloat kLabelOffsetX = 20.f;
                     [_items addObject:result.hpEntity];
                     // 刷新carousel
                     [self.carousel reloadData];
-                    [MBProgressHUD hideHUD];
+                    self.leftRefreshLabel.hidden = NO;
                 }
-            } else {
-                [MBProgressHUD hideHUD];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDefaultAnimationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self endRefreshing];
+                });
+                
                 
             }
+           
         }
+        
+        [self.indicatorView stopAnimating];
     } failure:^(NSError *error) {
         JHLog(@"%@", error);
+        [self.indicatorView stopAnimating];
     }];
 }
 
 #pragma mark - Private
-- (void)endRefreshing {
-    _refreshing = NO;
+/**
+ *  右拉刷新
+ */
+- (void)refreshing {
+    if (self.items.count > 0) {// 避免第一个还未加载的时候右拉刷新更新数据
+        
+        _refreshing = YES;
+        [self requestHomeContentAtIndex:0];
+    }
+}
 
+/**
+ *  停止刷新归位
+ */
+- (void)endRefreshing {
+    if (self.isRefreshing) {
+        [UIView animateWithDuration:kDefaultAnimationDuration animations:^{
+            self.carousel.contentOffset = CGSizeMake(0, 0);
+            self.leftRefreshLabel.x = - self.leftRefreshLabel.width - kLabelOffsetX;
+        } completion:^(BOOL finished) {
+            _needRefresh = NO;
+            _canScrollBack = YES;
+        }];
+    }
 }
 
 
@@ -188,5 +217,69 @@ static const CGFloat kLabelOffsetX = 20.f;
     return homeView;
 }
 
+
+#pragma mark - iCarouselDelegate
+
+- (CGFloat)carouselItemWidth:(iCarousel *)carousel {
+    return self.view.width;
+}
+
+
+- (void)carouselDidScroll:(iCarousel *)carousel {
+    // 当右拉的时候，改变 leftRefreshLabel 的 x，根据右拉的速度一点点显示 leftRefreshLabel
+    if (carousel.scrollOffset <= 0) {
+        if (self.isCanScrollBack) {
+            // 计算右拉的距离
+            _draggedX = fabs(carousel.scrollOffset * carousel.itemWidth);
+
+        
+            CGFloat labelX = _draggedX - self.leftRefreshLabel.width - kLabelOffsetX;
+            self.leftRefreshLabel.x = labelX;
+            // 当右拉到一定的距离之后将 leftRefreshLabel 的文字改为“松开刷新数据...”，这里的距离为 leftRefreshLabel 宽度
+            if (_draggedX >= self.leftRefreshLabel.width + kLabelOffsetX) {
+                // 刷新 leftRefreshLabel
+                self.leftRefreshLabel.text = kLeftReleaseToRefreshHintText;
+                // 将刷新标记改为需要刷新
+                _needRefresh = YES;
+            } else {
+                // 刷新 leftRefreshLabel
+                self.leftRefreshLabel.text = kLeftDragToRightForRefreshHintText;
+                // 将刷新标记改为需要刷新
+                _needRefresh = NO;
+            }
+        }
+    }
+}
+
+- (void)carouselDidEndDragging:(iCarousel *)carousel willDecelerate:(BOOL)decelerate {
+    
+    if (!decelerate && self.isNeedRefresh) {// 右拉释放并且需要刷新数据
+        // 设置 leftRefreshLabel 的显示文字、X 轴坐标
+        self.leftRefreshLabel.text = kLeftReleaseIsRefreshingHintText;
+        self.leftRefreshLabel.x = 0;
+        
+        // 刷新数据
+        [self refreshing];
+        
+        // 不改变 leftRefreshLabel 的 frame
+        _canScrollBack = NO;
+        
+        [UIView animateWithDuration:kDefaultAnimationDuration animations:^{
+            // 设置 carousel item 的 X 轴偏移
+            carousel.contentOffset = CGSizeMake(self.leftRefreshLabel.width, 0);
+        }];
+        
+    }
+}
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel {
+    //	NSLog(@"carousel DidEndScrollingAnimation");
+    // 如果当前的 item 为第一个并且 leftRefreshLabel 可以 scroll back，那么就刷新 leftRefreshLabel
+    if (carousel.currentItemIndex == 0 && self.isCanScrollBack) {
+        self.leftRefreshLabel.text = kLeftDragToRightForRefreshHintText;
+        _needRefresh = NO;
+    }
+    
+}
 
 @end

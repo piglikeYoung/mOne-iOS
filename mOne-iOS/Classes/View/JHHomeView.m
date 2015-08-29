@@ -24,7 +24,6 @@
 @property (nonatomic, weak) UIImageView *contentBGImageView;
 @property (nonatomic, weak) UITextView *contentTextView;
 @property (nonatomic, weak) UIButton *praiseNumberBtn;
-@property (weak, nonatomic) UIActivityIndicatorView *indicatorView;// item 加载中转转的菊花
 @end
 
 @implementation JHHomeView
@@ -212,12 +211,6 @@
         make.height.mas_equalTo(@28);
         make.bottom.equalTo(containerView.mas_bottom).with.offset(-16);
     }];
-    
-    // 初始化加载中的菊花控件
-    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    indicatorView.hidesWhenStopped = YES;
-    self.indicatorView = indicatorView;
-    [self addSubview:indicatorView];
 }
 
 
@@ -226,23 +219,9 @@
 }
 
 
-- (void)startRefreshing {
-    self.indicatorView.center = self.center;
-    if (Is_Night_Mode) {
-        self.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
-    } else {
-        self.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    }
-    [self.indicatorView startAnimating];
-}
-
-
 - (void)setHomeInfo:(JHHomeInfo *)homeInfo {
     _homeInfo = homeInfo;
     self.scrollView.backgroundColor =  Is_Night_Mode ? JHNightBGViewColor : JHDawnBGViewColor;
-    
-    [self.indicatorView stopAnimating];
-    self.containerView.hidden = NO;
     
     self.volLabel.text = homeInfo.strHpTitle;
     [self.paintImageView configureImageViwWithImageURL:[NSURL URLWithString:homeInfo.strThumbnailUrl] animated:YES];
