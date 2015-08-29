@@ -110,9 +110,8 @@ static const CGFloat kLabelOffsetX = 20.f;
     
     [self.carousel addSubview:leftRefreshLabel];
     
-    
-    
-    
+    self.refreshing = YES;
+    [self requestHomeContentAtIndex:@(self.items.count)];
 }
 
 #pragma mark - Request
@@ -124,22 +123,31 @@ static const CGFloat kLabelOffsetX = 20.f;
         if ([result.result isEqualToString:kSuccessFlag]) {
             if (self.isRefreshing) {
                 [self endRefreshing];
-                // 刷新的数据和之前获取的数据比较
-                if ([result.hpEntity.strHpId isEqualToString:((JHHomeInfo *)self.items[0]).strHpId]) {
-                    
-                    // 没有最新数据
-                    [MBProgressHUD showMessage:kNoLatestData toView:self.view];
-                } else {// 有新数据
-                    // 删掉所有的已读数据，不用考虑第一个已读数据和最新数据之间相差几天，简单粗暴
-                    [_items removeAllObjects];
+                // 之前有数据
+                if (self.items.count > 0) {
+                    // 刷新的数据和之前获取的数据比较
+                    if ([result.hpEntity.strHpId isEqualToString:((JHHomeInfo *)self.items[0]).strHpId]) {
+                        
+                        // 没有最新数据
+                        [MBProgressHUD showMessage:kNoLatestData toView:self.view];
+                    } else {// 有新数据
+                        // 删掉所有的已读数据，不用考虑第一个已读数据和最新数据之间相差几天，简单粗暴
+                        [_items removeAllObjects];
+                        // 添加到数组
+                        [_items addObject:result.hpEntity];
+                        // 刷新carousel
+                        [self.carousel reloadData];
+                        [MBProgressHUD hideHUD];
+                    }
+                }
+                // 之前没数据
+                else {
                     // 添加到数组
                     [_items addObject:result.hpEntity];
                     // 刷新carousel
                     [self.carousel reloadData];
                     [MBProgressHUD hideHUD];
                 }
-                
-                
             } else {
                 [MBProgressHUD hideHUD];
                 
@@ -167,8 +175,17 @@ static const CGFloat kLabelOffsetX = 20.f;
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
+    JHHomeView *homeView = nil;
     
-    return self.items[index];
+    if (!homeView) {
+        homeView = [[JHHomeView alloc] initWithFrame:carousel.bounds];
+        homeView.homeInfo = self.items[index];
+        homeView.tag = 1;
+    } else {
+        homeView = (JHHomeView *)[view viewWithTag:1];
+    }
+    
+    return homeView;
 }
 
 

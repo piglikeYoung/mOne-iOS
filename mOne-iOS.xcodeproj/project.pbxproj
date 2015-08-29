@@ -30,6 +30,9 @@
 		7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CA1B90417A00F287B7 /* JHNavigationController.m */; };
 		7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */; };
 		7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */; };
+		7DE514881B914B0B00C5C501 /* CircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE514851B914B0B00C5C501 /* CircularLoaderView.m */; };
+		7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE514871B914B0B00C5C501 /* CustomImageView.m */; };
+		7DE5148C1B915DD600C5C501 /* Century Gothic Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7DE5148B1B915DD600C5C501 /* Century Gothic Bold.TTF */; };
 		7DE87C891B90915D009AB8AB /* JHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C881B90915D009AB8AB /* JHHttpTool.m */; };
 		7DE87C8C1B9091AA009AB8AB /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C8B1B9091AA009AB8AB /* MBProgressHUD+MJ.m */; };
 		7DE87C8F1B909257009AB8AB /* JHBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C8E1B909257009AB8AB /* JHBaseTool.m */; };
@@ -102,6 +105,11 @@
 		7DE2F2CD1B90496F00F287B7 /* JHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTabBarController.m; sourceTree = "<group>"; };
 		7DE2F2D21B906B0E00F287B7 /* JHHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeView.h; sourceTree = "<group>"; };
 		7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeView.m; sourceTree = "<group>"; };
+		7DE514841B914B0B00C5C501 /* CircularLoaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularLoaderView.h; sourceTree = "<group>"; };
+		7DE514851B914B0B00C5C501 /* CircularLoaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularLoaderView.m; sourceTree = "<group>"; };
+		7DE514861B914B0B00C5C501 /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		7DE514871B914B0B00C5C501 /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
+		7DE5148B1B915DD600C5C501 /* Century Gothic Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic Bold.TTF"; sourceTree = "<group>"; };
 		7DE87C871B90915D009AB8AB /* JHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHttpTool.h; sourceTree = "<group>"; };
 		7DE87C881B90915D009AB8AB /* JHHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHttpTool.m; sourceTree = "<group>"; };
 		7DE87C8A1B9091AA009AB8AB /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
@@ -264,6 +272,7 @@
 		7DE2F27B1B90106900F287B7 /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
+				7DE5148A1B915DD600C5C501 /* Fonts */,
 			);
 			name = "Resource(资源)";
 			path = Resource;
@@ -293,6 +302,10 @@
 			children = (
 				7DE2F2D21B906B0E00F287B7 /* JHHomeView.h */,
 				7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */,
+				7DE514841B914B0B00C5C501 /* CircularLoaderView.h */,
+				7DE514851B914B0B00C5C501 /* CircularLoaderView.m */,
+				7DE514861B914B0B00C5C501 /* CustomImageView.h */,
+				7DE514871B914B0B00C5C501 /* CustomImageView.m */,
 			);
 			name = "View(自定义视图)";
 			path = View;
@@ -431,6 +444,14 @@
 			);
 			name = "Personal(个人)";
 			path = Personal;
+			sourceTree = "<group>";
+		};
+		7DE5148A1B915DD600C5C501 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7DE5148B1B915DD600C5C501 /* Century Gothic Bold.TTF */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7DE87C861B90913B009AB8AB /* HttpTool */ = {
@@ -587,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DE2F2621B900ED900F287B7 /* LaunchScreen.xib in Resources */,
+				7DE5148C1B915DD600C5C501 /* Century Gothic Bold.TTF in Resources */,
 				7DE2F25F1B900ED900F287B7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +665,7 @@
 				7DE2F2921B9012E900F287B7 /* main.m in Sources */,
 				7DE87CA61B90969D009AB8AB /* JHBaseParam.m in Sources */,
 				7DE87C8F1B909257009AB8AB /* JHBaseTool.m in Sources */,
+				7DE514881B914B0B00C5C501 /* CircularLoaderView.m in Sources */,
 				7DE2F2B41B903B0500F287B7 /* DSNavigationBar.m in Sources */,
 				7DE87CB31B909D54009AB8AB /* JHTimeTool.m in Sources */,
 				7DE87C891B90915D009AB8AB /* JHHttpTool.m in Sources */,
@@ -650,6 +673,7 @@
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
 				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
+				7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */,
 				7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */,
 				7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */,
 				7DE2F2B01B90376800F287B7 /* UIImage+Extension.m in Sources */,

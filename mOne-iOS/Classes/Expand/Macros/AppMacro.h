@@ -24,6 +24,9 @@
 #define JHColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define JHColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
+#define JHBoldSystemFont(size)  [UIFont boldSystemFontOfSize:size]
+#define JHSystemFont(size)      [UIFont systemFontOfSize:size]
+
 // 是否为iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
@@ -64,6 +67,21 @@
 // 日常模式
 #define JHDawnTabBarColor JHColor(240, 240, 240)
 
+// VOL字体颜色
+#define JHVOLTextColor JHColor(85, 85, 85)// #555555
+
+// 作者字体颜色
+#define JHPaintInfoTextColor JHColor(85, 85, 85) // #555555
+// 天数的字体颜色
+#define JHDayTextColor JHColor(55, 194, 241) // #37C2F1
+// 月份和年份字体颜色
+#define JHMonthAndYearTextColor JHColor(173, 173, 173)// #ADADAD
+// 点赞按钮字体颜色
+#define JHPraiseBtnTextColor JHColor(80, 80, 80)// #505050
+
+// 加载图片圈圈颜色
+#define LoadingCircleColor JHColor(132, 132, 132) // #848484
+
 //--------------------http接口---------------
 // 获取首页内容接口地址
 #define URL_GET_HOME_CONTENT @"http://bea.wufazhuce.com/OneForWeb/one/getHp_N"
@@ -75,6 +93,10 @@
 //#define URL_BACKUP_GET_QUESTION_CONTENT @"http://bea.wufazhuce.com/OneForWeb/one/getQ_N"
 // 获取东西接口地址
 #define URL_GET_THING_CONTENT @"http://bea.wufazhuce.com/OneForWeb/one/o_f"
+
+
+//--------------------
+#define Is_Night_Mode [DKNightVersionManager currentThemeVersion] == DKThemeVersionNight
 
 
 #endif
