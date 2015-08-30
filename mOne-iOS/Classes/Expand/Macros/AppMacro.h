@@ -66,7 +66,10 @@
 #define JHNightTabBarColor JHColor(48, 48, 49)
 // 日常模式
 #define JHDawnTabBarColor JHColor(240, 240, 240)
+// 加载图片圈圈颜色
+#define LoadingCircleColor JHColor(132, 132, 132) // #848484
 
+//-------------------首页界面宏-------------------
 // VOL字体颜色
 #define JHVOLTextColor JHColor(85, 85, 85)// #555555
 
@@ -81,8 +84,17 @@
 // 右拉刷新字体颜色
 #define JHLeftRefreshLabelTextColor JHColor(90, 91, 92)// #5A5B5C
 
-// 加载图片圈圈颜色
-#define LoadingCircleColor JHColor(132, 132, 132) // #848484
+//--------------------文章界面宏----------------------
+#define JHAuthorTextViewColor JHColor(51, 51, 51) // #333333
+#define JHAuthorTextColor JHColor(90, 91, 92) // #5A5B5C
+#define JHAuthorWenNameTextColor JHColor(172, 177, 180)// #ACB1B4
+#define JHDateTextColor JHColor(85, 85, 85)// #555555
+#define JHNightTextColor JHColor(135, 135, 135) // #878787
+#define NightWebViewBGColorName @"#262626"
+#define DawnWebViewBGColorName @"#f0f0f0"
+#define NightWebViewTextColorName @"#888888"
+#define DawnWebViewTextColorName @"#333333"
+
 
 //--------------------http接口---------------
 // 获取首页内容接口地址

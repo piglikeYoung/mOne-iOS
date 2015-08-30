@@ -10,6 +10,8 @@
 
 @interface JHBaseParam : NSObject
 
+@property (nonatomic, copy) NSNumber *index;
+
 + (instancetype)param;
 
 @end

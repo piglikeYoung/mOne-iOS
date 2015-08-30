@@ -68,4 +68,14 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     return [inputFormatter dateFromString:dateStr];
 }
 
+
++ (NSString *)enMarketTimeWithOriginalMarketTime:(NSString *)originalMarketTime {
+    NSDate *marketTime = [self dateFromString:originalMarketTime];
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"MMMM dd, yyyy"];
+    NSString *readingENMarketTime = [dateformatter stringFromDate:marketTime];
+    
+    return readingENMarketTime;
+}
+
 @end

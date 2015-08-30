@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		102099A8D2C0DA652DCCB877 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA07120AD01F4B8ED12E3109 /* libPods.a */; };
+		7D7E82EF1B92D5770070BAFB /* JHReadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E82EE1B92D5770070BAFB /* JHReadingView.m */; };
+		7D7E82FE1B92D71B0070BAFB /* JHReadingAuthorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E82FD1B92D71B0070BAFB /* JHReadingAuthorView.m */; };
 		7DE1A3981B91DA4100DC9A07 /* MBProgressHUD+JH.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE1A3971B91DA4100DC9A07 /* MBProgressHUD+JH.m */; };
 		7DE2F25F1B900ED900F287B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2F25E1B900ED900F287B7 /* Images.xcassets */; };
 		7DE2F2621B900ED900F287B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2F2601B900ED900F287B7 /* LaunchScreen.xib */; };
@@ -46,6 +48,9 @@
 		7DE87CAC1B90980E009AB8AB /* JHHomeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CAB1B90980E009AB8AB /* JHHomeParam.m */; };
 		7DE87CAF1B909823009AB8AB /* JHHomeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CAE1B909823009AB8AB /* JHHomeResult.m */; };
 		7DE87CB31B909D54009AB8AB /* JHTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87CB21B909D54009AB8AB /* JHTimeTool.m */; };
+		7DE958BB1B92B78B009FAB30 /* JHReadingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE958BA1B92B78B009FAB30 /* JHReadingTool.m */; };
+		7DE958BE1B92B7D4009FAB30 /* JHReadingParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE958BD1B92B7D4009FAB30 /* JHReadingParam.m */; };
+		7DE958C11B92B871009FAB30 /* JHReadingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE958C01B92B871009FAB30 /* JHReadingResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,10 @@
 
 /* Begin PBXFileReference section */
 		633A04CD09C5DAACDC164EF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7D7E82ED1B92D5770070BAFB /* JHReadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingView.h; sourceTree = "<group>"; };
+		7D7E82EE1B92D5770070BAFB /* JHReadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingView.m; sourceTree = "<group>"; };
+		7D7E82FC1B92D71B0070BAFB /* JHReadingAuthorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingAuthorView.h; sourceTree = "<group>"; };
+		7D7E82FD1B92D71B0070BAFB /* JHReadingAuthorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingAuthorView.m; sourceTree = "<group>"; };
 		7DE1A3961B91DA4100DC9A07 /* MBProgressHUD+JH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JH.h"; sourceTree = "<group>"; };
 		7DE1A3971B91DA4100DC9A07 /* MBProgressHUD+JH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JH.m"; sourceTree = "<group>"; };
 		7DE2F24E1B900ED900F287B7 /* mOne-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mOne-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +145,12 @@
 		7DE87CAE1B909823009AB8AB /* JHHomeResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeResult.m; sourceTree = "<group>"; };
 		7DE87CB11B909D54009AB8AB /* JHTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTimeTool.h; sourceTree = "<group>"; };
 		7DE87CB21B909D54009AB8AB /* JHTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTimeTool.m; sourceTree = "<group>"; };
+		7DE958B91B92B78B009FAB30 /* JHReadingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingTool.h; sourceTree = "<group>"; };
+		7DE958BA1B92B78B009FAB30 /* JHReadingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingTool.m; sourceTree = "<group>"; };
+		7DE958BC1B92B7D4009FAB30 /* JHReadingParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingParam.h; sourceTree = "<group>"; };
+		7DE958BD1B92B7D4009FAB30 /* JHReadingParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingParam.m; sourceTree = "<group>"; };
+		7DE958BF1B92B871009FAB30 /* JHReadingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHReadingResult.h; sourceTree = "<group>"; };
+		7DE958C01B92B871009FAB30 /* JHReadingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHReadingResult.m; sourceTree = "<group>"; };
 		85C5C47FABAF70C194B794C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA07120AD01F4B8ED12E3109 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -302,6 +317,10 @@
 			children = (
 				7DE2F2D21B906B0E00F287B7 /* JHHomeView.h */,
 				7DE2F2D31B906B0E00F287B7 /* JHHomeView.m */,
+				7D7E82ED1B92D5770070BAFB /* JHReadingView.h */,
+				7D7E82EE1B92D5770070BAFB /* JHReadingView.m */,
+				7D7E82FC1B92D71B0070BAFB /* JHReadingAuthorView.h */,
+				7D7E82FD1B92D71B0070BAFB /* JHReadingAuthorView.m */,
 				7DE514841B914B0B00C5C501 /* CircularLoaderView.h */,
 				7DE514851B914B0B00C5C501 /* CircularLoaderView.m */,
 				7DE514861B914B0B00C5C501 /* CustomImageView.h */,
@@ -463,6 +482,8 @@
 				7DE87C8E1B909257009AB8AB /* JHBaseTool.m */,
 				7DE87CA01B9095A6009AB8AB /* JHHomeTool.h */,
 				7DE87CA11B9095A6009AB8AB /* JHHomeTool.m */,
+				7DE958B91B92B78B009FAB30 /* JHReadingTool.h */,
+				7DE958BA1B92B78B009FAB30 /* JHReadingTool.m */,
 			);
 			path = HttpTool;
 			sourceTree = "<group>";
@@ -485,6 +506,10 @@
 			children = (
 				7DE87C951B90945C009AB8AB /* JHReadingInfo.h */,
 				7DE87C961B90945C009AB8AB /* JHReadingInfo.m */,
+				7DE958BC1B92B7D4009FAB30 /* JHReadingParam.h */,
+				7DE958BD1B92B7D4009FAB30 /* JHReadingParam.m */,
+				7DE958BF1B92B871009FAB30 /* JHReadingResult.h */,
+				7DE958C01B92B871009FAB30 /* JHReadingResult.m */,
 			);
 			path = Reading;
 			sourceTree = "<group>";
@@ -661,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DE87CAF1B909823009AB8AB /* JHHomeResult.m in Sources */,
+				7DE958C11B92B871009FAB30 /* JHReadingResult.m in Sources */,
 				7DE1A3981B91DA4100DC9A07 /* MBProgressHUD+JH.m in Sources */,
 				7DE2F2971B902D4600F287B7 /* AppConst.m in Sources */,
 				7DE2F2921B9012E900F287B7 /* main.m in Sources */,
@@ -673,6 +699,7 @@
 				7DE2F2911B9012E900F287B7 /* AppDelegate.m in Sources */,
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
+				7D7E82FE1B92D71B0070BAFB /* JHReadingAuthorView.m in Sources */,
 				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
 				7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */,
 				7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */,
@@ -682,8 +709,10 @@
 				7DE87C9F1B90950A009AB8AB /* JHThingInfo.m in Sources */,
 				7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */,
 				7DE87C931B9093EB009AB8AB /* JHHomeInfo.m in Sources */,
+				7D7E82EF1B92D5770070BAFB /* JHReadingView.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
 				7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */,
+				7DE958BE1B92B7D4009FAB30 /* JHReadingParam.m in Sources */,
 				7DE87CA21B9095A6009AB8AB /* JHHomeTool.m in Sources */,
 				7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */,
 				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
@@ -692,6 +721,7 @@
 				7DE87C9B1B9094C4009AB8AB /* JHQuestionInfo.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,
 				7DE2F2A91B90300500F287B7 /* UIView+Extension.m in Sources */,
+				7DE958BB1B92B78B009FAB30 /* JHReadingTool.m in Sources */,
 				7DE2F2BC1B903F4800F287B7 /* JHReadingViewController.m in Sources */,
 				7DE2F2A31B902F8A00F287B7 /* Foundation+Log.m in Sources */,
 			);

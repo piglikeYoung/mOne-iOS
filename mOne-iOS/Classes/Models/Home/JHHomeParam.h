@@ -10,8 +10,6 @@
 
 @interface JHHomeParam : JHBaseParam
 
-@property (nonatomic, copy) NSNumber *index;
-
 @property (nonatomic, copy) NSString *strDate;
 
 @property (nonatomic, copy) NSString *strRow;

@@ -33,4 +33,13 @@
  *  @return 转换之后的时间
  */
 + (NSString *)homeENMarketTimeWithOriginalMarketTime:(NSString *)originalMarketTime;
+
+/**
+ *  根据“yyyy-MM-dd”格式的时间获取文章或者东西头部的时间格式
+ *
+ *  @param originalMarketTime 原数据中的时间
+ *
+ *  @return 转换之后的时间
+ */
++ (NSString *)enMarketTimeWithOriginalMarketTime:(NSString *)originalMarketTime;
 @end

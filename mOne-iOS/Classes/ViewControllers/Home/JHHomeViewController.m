@@ -14,8 +14,6 @@
 #import "JHHomeResult.h"
 #import "JHHomeInfo.h"
 
-static const CGFloat kLabelOffsetX = 20.f;
-
 @interface JHHomeViewController ()<iCarouselDataSource, iCarouselDelegate>
 
 /**
@@ -242,16 +240,13 @@ static const CGFloat kLabelOffsetX = 20.f;
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
-    JHHomeView *homeView = nil;
+    JHHomeView *homeView = (JHHomeView *)view;
     
     // 复用View
     if (!homeView) {
         homeView = [[JHHomeView alloc] initWithFrame:carousel.bounds];
-        homeView.homeInfo = self.items[index];
-        homeView.tag = 1;
-    } else {
-        homeView = (JHHomeView *)[view viewWithTag:1];
     }
+    homeView.homeInfo = self.items[index];
     
     return homeView;
 }

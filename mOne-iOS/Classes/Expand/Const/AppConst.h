@@ -24,6 +24,9 @@ extern NSString *const kLeftReleaseToRefreshHintText;
 // 正在载入
 extern NSString *const kLeftReleaseIsRefreshingHintText;
 
+// 右拉刷新label的OffsetX
+extern const CGFloat kLabelOffsetX;
+
 // 请求接口地址
 extern NSString *const kServerUrl;
 
