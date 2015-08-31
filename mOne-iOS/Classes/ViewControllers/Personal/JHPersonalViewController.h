@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 piglikeyoung. All rights reserved.
 //
 
-#import "JHBaseViewController.h"
+#import "JHBaseTableViewController.h"
 
-@interface JHPersonalViewController : JHBaseViewController
+@interface JHPersonalViewController : JHBaseTableViewController
 
 @end

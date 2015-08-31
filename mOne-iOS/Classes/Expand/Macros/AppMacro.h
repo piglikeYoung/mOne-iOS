@@ -95,6 +95,11 @@
 #define NightWebViewTextColorName @"#888888"
 #define DawnWebViewTextColorName @"#333333"
 
+//--------------------个人界面宏----------------------
+#define JHTableViewCellSeparatorDawnColor JHColor(200, 199, 204) // #C8C7CC
+#define JHDawnTextColor JHColor(90, 91, 92) // #5A5B5C
+
+
 
 //--------------------http接口---------------
 // 获取首页内容接口地址

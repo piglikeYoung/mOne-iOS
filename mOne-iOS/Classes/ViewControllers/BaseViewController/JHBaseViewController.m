@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = JHDawnBGViewColor;
     // 设置夜间模式背景色
     self.view.nightBackgroundColor = JHNightBGViewColor;
     // 设置标题栏不能覆盖下面viewcontroller的内容
