@@ -98,6 +98,8 @@
 //--------------------个人界面宏----------------------
 #define JHTableViewCellSeparatorDawnColor JHColor(200, 199, 204) // #C8C7CC
 #define JHDawnTextColor JHColor(90, 91, 92) // #5A5B5C
+#define JHSettingDawnViewBGColor JHColor(235, 235, 235) // #EBEBEB
+
 
 
 
