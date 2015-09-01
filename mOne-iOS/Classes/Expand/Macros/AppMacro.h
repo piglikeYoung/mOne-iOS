@@ -99,7 +99,8 @@
 #define JHTableViewCellSeparatorDawnColor JHColor(200, 199, 204) // #C8C7CC
 #define JHDawnTextColor JHColor(90, 91, 92) // #5A5B5C
 #define JHSettingDawnViewBGColor JHColor(235, 235, 235) // #EBEBEB
-
+#define JHDawnCellHeaderTextColor JHColor(85, 85, 85)// #555555
+#define JHNightCellHeaderTextColor JHColor(75, 75, 75)// #4B4B4B
 
 
 

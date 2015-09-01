@@ -84,18 +84,18 @@
     //1.设置普通状态下文字的属性
     NSMutableDictionary *textAttrs=[NSMutableDictionary dictionary];
     //设置字体
-    textAttrs[UITextAttributeFont]=[UIFont systemFontOfSize:15];
+    textAttrs[UITextAttributeFont]=[UIFont fontWithName:@"HelveticaNeue-Medium" size:15];
     //这是偏移量为0
     textAttrs[UITextAttributeTextShadowOffset]=[NSValue valueWithUIOffset:UIOffsetZero];
-    //设置颜色为橙色
-    textAttrs[UITextAttributeTextColor] = [UIColor orangeColor];
+    //设置颜色
+    textAttrs[UITextAttributeTextColor] = JHDawnTextColor;
     [appearance setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
     
     //2.设置高亮状态下文字的属性
     //使用1中的textAttrs进行通用设置
     NSMutableDictionary *highTextAttrs = [NSMutableDictionary dictionaryWithDictionary:textAttrs];
-    highTextAttrs[UITextAttributeTextColor] = [UIColor redColor];
+    highTextAttrs[UITextAttributeTextColor] = JHDawnTextColor;
     [appearance setTitleTextAttributes:highTextAttrs forState:UIControlStateHighlighted];
     
     
@@ -107,7 +107,8 @@
     [appearance setTitleTextAttributes:disabletextAttrs forState:UIControlStateDisabled];
 
     //4.设置小图标颜色
-    [appearance setTintColor:JHColorRGBA(100, 100, 100, 0.9)];
+    [appearance setTintColor:JHRandomColor];
+
 }
 
 // 拦截每次添加子控制器
@@ -118,6 +119,7 @@
     
     // 初始化导航栏右侧的分享按钮
     UIBarButtonItem *shareItem = [UIBarButtonItem itemWithImageName:@"nav_share_btn_normal" highImageName:@"nav_share_btn_highlighted" target:self action:@selector(shareItemClick)];
+    
     
     childController.navigationItem.rightBarButtonItem = shareItem;
     

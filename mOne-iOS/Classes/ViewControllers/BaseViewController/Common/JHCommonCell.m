@@ -36,7 +36,7 @@
 - (UIImageView *)rightArrow
 {
     if (_rightArrow == nil) {
-        self.rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_icon_arrow"]];
+        _rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_icon_arrow"]];
     }
     return _rightArrow;
 }
@@ -44,7 +44,7 @@
 - (UISwitch *)rightSwitch
 {
     if (_rightSwitch == nil) {
-        self.rightSwitch = [[UISwitch alloc] init];
+        _rightSwitch = [[UISwitch alloc] init];
     }
     return _rightSwitch;
 }
@@ -52,9 +52,9 @@
 - (UILabel *)rightLabel
 {
     if (_rightLabel == nil) {
-        self.rightLabel = [[UILabel alloc] init];
-        self.rightLabel.textColor = [UIColor lightGrayColor];
-        self.rightLabel.font = [UIFont systemFontOfSize:13];
+        _rightLabel = [[UILabel alloc] init];
+        _rightLabel.textColor = [UIColor lightGrayColor];
+        _rightLabel.font = JHSystemFont(17);
     }
     return _rightLabel;
 }
