@@ -83,7 +83,7 @@
         self.textLabel.nightTextColor = JHNightTextColor;
         self.backgroundColor = JHDawnBGViewColor;
         self.nightBackgroundColor = JHNightBGViewColor;
-
+        [DKNightVersionManager addClassToSet:self.class];
     }
     
     return self;
@@ -100,11 +100,11 @@
 #pragma mark - setter
 - (void)setIndexPath:(NSIndexPath *)indexPath rowsInSection:(int)rows
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
-        self.nightBackgroundColor = JHNightBGViewColor;
-    } else {
-        self.backgroundColor = JHDawnBGViewColor;
-    }
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
+//        self.nightBackgroundColor = JHNightBGViewColor;
+//    } else {
+//        self.backgroundColor = JHDawnBGViewColor;
+//    }
 }
 
 
