@@ -110,9 +110,6 @@
     disabletextAttrs[UITextAttributeTextColor]=[UIColor lightGrayColor];
     [appearance setTitleTextAttributes:disabletextAttrs forState:UIControlStateDisabled];
 
-    //4.设置小图标颜色
-    [appearance setTintColor:JHDawnTextColor];
-
 }
 
 // 拦截每次添加子控制器

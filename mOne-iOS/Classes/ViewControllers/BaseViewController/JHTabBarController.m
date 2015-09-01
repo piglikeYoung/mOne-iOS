@@ -34,17 +34,16 @@
     
     // 开启了夜间模式
     if (Is_Night_Mode) {
-        [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
-        
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
-
     }
     // 未开启
     else {
-        [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
-        
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHDawnTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
     }
+    
+    // 监听夜间模式按钮通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
 }
 
 /**
@@ -121,6 +120,17 @@
     
     [nav addChildViewController:childVc];
     [self addChildViewController:nav];
+}
+
+#pragma mark - 夜间模式
+- (void)nightModeSwitch:(NSNotification *)notification {
+    if (Is_Night_Mode) {
+        self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
+    }
+    // 未开启
+    else {
+        self.tabBar.backgroundImage = [UIImage imageWithColor:JHDawnTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
+    }
 }
 
 @end

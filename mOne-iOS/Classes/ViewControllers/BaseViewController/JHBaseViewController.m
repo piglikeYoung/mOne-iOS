@@ -7,7 +7,6 @@
 //
 
 #import "JHBaseViewController.h"
-#import "DSNavigationBar.h"
 
 @interface JHBaseViewController ()
 
