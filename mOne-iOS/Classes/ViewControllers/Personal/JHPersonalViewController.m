@@ -26,6 +26,14 @@ static NSString *const OtherCellID = @"OtherCell";
     [super viewDidLoad];
     
     [self setupGroups];
+    
+    // 监听夜间模式按钮通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -61,6 +69,12 @@ static NSString *const OtherCellID = @"OtherCell";
     
     group.items = @[userItem, settingItem, aboutItem];
 }
+
+#pragma mark - 夜间模式
+- (void)nightModeSwitch:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
+
 
 
 

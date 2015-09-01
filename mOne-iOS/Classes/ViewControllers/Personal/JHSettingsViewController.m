@@ -44,7 +44,27 @@ static const CGFloat kTableViewCellHeaderViewH = 35;
     [self setTitleView];
     
     [self setupGroups];
+    
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 监听夜间模式按钮通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+//- (void)dealloc {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//}
 
 
 
@@ -131,6 +151,14 @@ static const CGFloat kTableViewCellHeaderViewH = 35;
     return headerView;
 }
 
-
+#pragma mark - 夜间模式
+- (void)nightModeSwitch:(NSNotification *)notification {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
+        self.tableView.backgroundColor = JHDawnBGViewColor;
+    } else {
+        self.tableView.backgroundColor = JHNightBGViewColor;
+    }
+    [self.tableView reloadData];
+}
 
 @end
