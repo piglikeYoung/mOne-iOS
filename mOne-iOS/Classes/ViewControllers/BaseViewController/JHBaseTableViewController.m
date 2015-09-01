@@ -38,9 +38,9 @@
     // 设置夜间模式背景色
     self.tableView.nightBackgroundColor = JHNightBGViewColor;
     self.tableView.separatorColor = JHTableViewCellSeparatorDawnColor;
-    self.tableView.nightSeparatorColor = [UIColor blackColor];
+    self.tableView.nightSeparatorColor = JHNightBGViewColor;
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, JHScreenW, 1)];
     // 不显示Cell多余的线

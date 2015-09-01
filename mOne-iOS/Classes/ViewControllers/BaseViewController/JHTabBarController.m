@@ -33,12 +33,10 @@
     [self addAllChildVcs];
     
     // 开启了夜间模式
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
+    if (Is_Night_Mode) {
         [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
         
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
-        
-        [DKNightVersionManager nightFalling];
 
     }
     // 未开启
@@ -118,7 +116,8 @@
     childVc.tabBarItem.selectedImage = selectedImage;
     
     // 添加为tabbar控制器的子控制器
-    JHNavigationController *nav = [[JHNavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
+//    JHNavigationController *nav = [[JHNavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
+    JHNavigationController *nav = [[JHNavigationController alloc] initWithRootViewController:childVc];
     
     [nav addChildViewController:childVc];
     [self addChildViewController:nav];

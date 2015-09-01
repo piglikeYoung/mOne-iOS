@@ -79,7 +79,7 @@ static const CGFloat kTableViewCellHeaderViewH = 35;
     
     // 2.设置组的所有行数据
     JHCommonSwitchItem *nightItem = [JHCommonSwitchItem itemWithTitle:@"夜间模式切换"];
-    
+    nightItem.switchType = NightModeSwitch;
     
     group.items = @[nightItem];
 }

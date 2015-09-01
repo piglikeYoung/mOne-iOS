@@ -8,6 +8,13 @@
 
 #import "JHCommonItem.h"
 
+typedef enum {
+    NightModeSwitch, // 夜间模式开关类型
+} SwitchItemType;
+
+
 @interface JHCommonSwitchItem : JHCommonItem
+
+@property (nonatomic, assign) SwitchItemType switchType;
 
 @end

@@ -12,6 +12,7 @@
 #import "JHCommonSwitchItem.h"
 #import "JHCommonLabelItem.h"
 #import "UIImage+Extension.h"
+#import "DSNavigationBar.h"
 
 @interface JHCommonCell()
 /**
@@ -45,6 +46,7 @@
 {
     if (_rightSwitch == nil) {
         _rightSwitch = [[UISwitch alloc] init];
+        [_rightSwitch addTarget:self action:@selector(rightSwitchChanged:) forControlEvents:UIControlEventValueChanged];
     }
     return _rightSwitch;
 }
@@ -80,12 +82,9 @@
 
         self.textLabel.textColor = JHDawnTextColor;
         self.textLabel.nightTextColor = JHNightTextColor;
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = JHDawnBGViewColor;
         self.nightBackgroundColor = JHNightBGViewColor;
-        
-        // 设置背景view
-        self.backgroundView = [[UIImageView alloc] init];
-        self.selectedBackgroundView = [[UIImageView alloc] init];
+
     }
     
     return self;
@@ -102,26 +101,26 @@
 #pragma mark - setter
 - (void)setIndexPath:(NSIndexPath *)indexPath rowsInSection:(int)rows
 {
-    // 1.取出背景view
-    UIImageView *bgView = (UIImageView *)self.backgroundView;
-    UIImageView *selectedBgView = (UIImageView *)self.selectedBackgroundView;
-    
-    // 2.设置背景图片
-    if (rows == 1) { // 只有一行
-        bgView.image = [UIImage resizedImage:@"common_card_background"];
-        selectedBgView.image = [UIImage resizedImage:@"common_card_background_highlighted"];
-    }
-    // 多行
-    else if (indexPath.row == 0) { // 首行
-        bgView.image = [UIImage resizedImage:@"common_card_top_background"];
-        selectedBgView.image = [UIImage resizedImage:@"common_card_top_background_highlighted"];
-    } else if (indexPath.row == rows - 1) { // 末行
-        bgView.image = [UIImage resizedImage:@"common_card_bottom_background"];
-        selectedBgView.image = [UIImage resizedImage:@"common_card_bottom_background_highlighted"];
-    } else { // 中间
-        bgView.image = [UIImage resizedImage:@"common_card_middle_background"];
-        selectedBgView.image = [UIImage resizedImage:@"common_card_middle_background_highlighted"];
-    }
+//    // 1.取出背景view
+//    UIImageView *bgView = (UIImageView *)self.backgroundView;
+//    UIImageView *selectedBgView = (UIImageView *)self.selectedBackgroundView;
+//    
+//    // 2.设置背景图片
+//    if (rows == 1) { // 只有一行
+//        bgView.image = [UIImage resizedImage:@"common_card_background"];
+//        selectedBgView.image = [UIImage resizedImage:@"common_card_background_highlighted"];
+//    }
+//    // 多行
+//    else if (indexPath.row == 0) { // 首行
+//        bgView.image = [UIImage resizedImage:@"common_card_top_background"];
+//        selectedBgView.image = [UIImage resizedImage:@"common_card_top_background_highlighted"];
+//    } else if (indexPath.row == rows - 1) { // 末行
+//        bgView.image = [UIImage resizedImage:@"common_card_bottom_background"];
+//        selectedBgView.image = [UIImage resizedImage:@"common_card_bottom_background_highlighted"];
+//    } else { // 中间
+//        bgView.image = [UIImage resizedImage:@"common_card_middle_background"];
+//        selectedBgView.image = [UIImage resizedImage:@"common_card_middle_background_highlighted"];
+//    }
     
 }
 
@@ -143,6 +142,15 @@
     if ([item isKindOfClass:[JHCommonArrowItem class]]) {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else if ([item isKindOfClass:[JHCommonSwitchItem class]]) {
+        JHCommonSwitchItem *switchItem = (JHCommonSwitchItem *)item;
+        switch (switchItem.switchType) {
+            case NightModeSwitch:
+                self.rightSwitch.on = Is_Night_Mode;
+                break;
+                
+            default:
+                break;
+        }
         self.accessoryView = self.rightSwitch;
     } else if ([item isKindOfClass:[JHCommonLabelItem class]]) {
         JHCommonLabelItem *labelItem = (JHCommonLabelItem *)item;
@@ -155,5 +163,29 @@
         self.accessoryView = nil;
     }
 }
+
+- (void) rightSwitchChanged:(UISwitch *)rightSwitch {
+    JHCommonSwitchItem *switchItem = (JHCommonSwitchItem *)self.item;
+    switch (switchItem.switchType) {
+        case NightModeSwitch:
+        {
+            if (rightSwitch.isOn) {
+                // 夜间模式开启
+                [DKNightVersionManager nightFalling];
+                [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
+                
+            } else {
+                // 日常模式开启
+                [DKNightVersionManager dawnComing];
+                [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 @end

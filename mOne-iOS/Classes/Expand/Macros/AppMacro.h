@@ -46,9 +46,6 @@
 // 导航栏标题的字体
 #define JHNavigationTitleFont [UIFont boldSystemFontOfSize:20]
 
-// App 主题模式是否开启夜间模式
-#define APP_THEME_NIGHT_MODE @"Night_Mode_Is_On"
-
 // Controller的View的背景色
 // 夜间模式
 #define JHNightBGViewColor JHColor(38, 38, 39) // #262626
@@ -117,7 +114,7 @@
 #define URL_GET_THING_CONTENT @"http://bea.wufazhuce.com/OneForWeb/one/o_f"
 
 
-//--------------------
+//-------------------夜间模式标示符----------------
 #define Is_Night_Mode [DKNightVersionManager currentThemeVersion] == DKThemeVersionNight
 
 
