@@ -13,7 +13,6 @@
 #import "JHQuestionViewController.h"
 #import "JHThingViewController.h"
 #import "JHPersonalViewController.h"
-#import "DSNavigationBar.h"
 #import "UIImage+Extension.h"
 
 @interface JHTabBarController ()<UITabBarControllerDelegate>
@@ -121,7 +120,6 @@
     childVc.tabBarItem.selectedImage = selectedImage;
     
     // 添加为tabbar控制器的子控制器
-//    JHNavigationController *nav = [[JHNavigationController alloc] initWithNavigationBarClass:[DSNavigationBar class] toolbarClass:nil];
     JHNavigationController *nav = [[JHNavigationController alloc] initWithRootViewController:childVc];
     
     [nav addChildViewController:childVc];

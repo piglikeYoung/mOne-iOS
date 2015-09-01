@@ -12,7 +12,6 @@
 #import "JHCommonSwitchItem.h"
 #import "JHCommonLabelItem.h"
 #import "UIImage+Extension.h"
-#import "DSNavigationBar.h"
 
 @interface JHCommonCell()
 /**
@@ -173,13 +172,9 @@
             if (rightSwitch.isOn) {
                 // 夜间模式开启
                 [DKNightVersionManager nightFalling];
-                [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
-                
             } else {
                 // 日常模式开启
                 [DKNightVersionManager dawnComing];
-                [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
-                
             }
             
             // 存储到偏好设置

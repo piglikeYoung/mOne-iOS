@@ -8,7 +8,6 @@
 
 #import "JHNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
-#import "DSNavigationBar.h"
 
 @interface JHNavigationController ()
 
@@ -34,15 +33,6 @@
     
     // 清空弹出手势的代理，就可以恢复弹出手势
     self.interactivePopGestureRecognizer.delegate = nil;
-    
-    // 监听夜间模式按钮通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionNightFallingNotification];
-    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionDawnComingNotification];
 }
 
 
@@ -152,15 +142,6 @@
 
 - (void) shareItemClick {
     
-}
-
-#pragma mark - 夜间模式
-- (void)nightModeSwitch:(NSNotification *)notification {
-    if (Is_Night_Mode) {
-        [[DSNavigationBar appearance] setNavigationBarWithColor:JHNightNavigationBarColor];
-    } else {
-        [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
-    }
 }
 
 
