@@ -145,7 +145,8 @@
         JHCommonSwitchItem *switchItem = (JHCommonSwitchItem *)item;
         switch (switchItem.switchType) {
             case NightModeSwitch:
-                self.rightSwitch.on = Is_Night_Mode;
+                
+                self.rightSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE];
                 break;
                 
             default:
@@ -178,7 +179,11 @@
                 // 日常模式开启
                 [DKNightVersionManager dawnComing];
                 [[DSNavigationBar appearance] setNavigationBarWithColor:JHDawnNavigationBarColor];
+                
             }
+            
+            // 存储到偏好设置
+            [[NSUserDefaults standardUserDefaults] setBool:rightSwitch.isOn forKey:APP_THEME_NIGHT_MODE];
         }
             break;
             

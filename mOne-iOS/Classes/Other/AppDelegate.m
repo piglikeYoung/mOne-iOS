@@ -23,6 +23,12 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
+    // 判断是否开启了夜间模式
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_THEME_NIGHT_MODE]) {
+        [DKNightVersionManager nightFalling];
+    } else {
+        [DKNightVersionManager dawnComing];
+    }
     
     JHTabBarController *rootTabBar = [[JHTabBarController alloc] init];
     self.window.rootViewController = rootTabBar;

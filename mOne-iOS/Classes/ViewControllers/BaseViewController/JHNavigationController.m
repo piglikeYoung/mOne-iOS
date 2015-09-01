@@ -40,6 +40,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionNightFallingNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionDawnComingNotification];
+}
+
+
 /**
  *  当第一次使用这个类的时候调用1次
  */

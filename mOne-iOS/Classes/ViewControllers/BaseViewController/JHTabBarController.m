@@ -28,10 +28,10 @@
     self.delegate = self;
     
     self.tabBar.tintColor = JHColor(55, 196, 242);
-    
     // 添加所有的子控制器
     [self addAllChildVcs];
     
+    // tabBar用这种方式生成背景图片，如果使用背景色透明的不好看
     // 开启了夜间模式
     if (Is_Night_Mode) {
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
@@ -45,6 +45,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionNightFallingNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionDawnComingNotification];
+}
+
 
 /**
  *  添加所有的子控制器
@@ -127,7 +133,6 @@
     if (Is_Night_Mode) {
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHNightTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
     }
-    // 未开启
     else {
         self.tabBar.backgroundImage = [UIImage imageWithColor:JHDawnTabBarColor andRect:CGRectMake(0, 0, 1, 1)];
     }

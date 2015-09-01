@@ -116,6 +116,8 @@
 
 //-------------------夜间模式标示符----------------
 #define Is_Night_Mode [DKNightVersionManager currentThemeVersion] == DKThemeVersionNight
+// 保存到偏好设置
+#define APP_THEME_NIGHT_MODE @"Night_Mode_Is_On"
 
 
 #endif

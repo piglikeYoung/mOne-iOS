@@ -64,7 +64,7 @@
 #pragma mark - view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // 滚动框
     iCarousel *carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, JHScreenW, JHScreenH - kNavigationBarH - kTableBarH)];
     carousel.delegate = self;
@@ -108,6 +108,16 @@
     
     // 请求数据
     [self leftLoadMoreData];
+    
+    
+    // 监听夜间模式按钮通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionNightFallingNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionDawnComingNotification];
 }
 
 #pragma mark - Request
@@ -320,6 +330,12 @@
         self.leftRefreshLabel.text = kLeftDragToRightForRefreshHintText;
     }
     
+}
+
+#pragma mark - 夜间模式
+- (void)nightModeSwitch:(NSNotification *)notification {
+    // 刷新数据，就能刷新日常模式或夜间模式
+    [self.carousel reloadData];
 }
 
 @end

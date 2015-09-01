@@ -109,6 +109,15 @@
     
     // 请求数据
     [self leftLoadMoreData];
+    
+    // 监听夜间模式按钮通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionNightFallingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nightModeSwitch:) name:DKNightVersionDawnComingNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionNightFallingNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:DKNightVersionDawnComingNotification];
 }
 
 #pragma mark - Request
@@ -240,7 +249,6 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
     JHReadingView *readingView = (JHReadingView *)view;
-    JHLog(@"%@", readingView);
     
     // 复用View
     if (!readingView) {
@@ -323,5 +331,9 @@
 }
 
 
-
+#pragma mark - 夜间模式
+- (void)nightModeSwitch:(NSNotification *)notification {
+    // 刷新数据，就能刷新日常模式或夜间模式
+    [self.carousel reloadData];
+}
 @end
