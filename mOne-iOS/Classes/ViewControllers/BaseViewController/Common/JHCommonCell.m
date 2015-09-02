@@ -56,6 +56,7 @@
         _rightLabel = [[UILabel alloc] init];
         _rightLabel.textColor = [UIColor lightGrayColor];
         _rightLabel.font = JHSystemFont(17);
+        _rightLabel.nightBackgroundColor = JHNightBGViewColor;
     }
     return _rightLabel;
 }
