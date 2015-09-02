@@ -104,8 +104,9 @@
 #define JHDawnCellHeaderTextColor JHColor(85, 85, 85)// #555555
 #define JHNightCellHeaderTextColor JHColor(75, 75, 75)// #4B4B4B
 
-
-
+//--------------------东西界面宏----------------------
+#define JHThingNameTextColor JHColor(90, 91, 92) // #5A5B5C
+#define JHThingDescriptionColor JHColor(51, 51, 51)// #333333
 
 
 //--------------------http接口---------------

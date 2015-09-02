@@ -50,6 +50,10 @@
 		7DE7EC651B9689A200D8955E /* JHQuestionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC641B9689A200D8955E /* JHQuestionTool.m */; };
 		7DE7EC681B968D2C00D8955E /* JHQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC671B968D2C00D8955E /* JHQuestionView.m */; };
 		7DE7EC6B1B96934500D8955E /* JHPraiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC6A1B96934500D8955E /* JHPraiseView.m */; };
+		7DE7EC6E1B969EF600D8955E /* JHThingParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC6D1B969EF600D8955E /* JHThingParam.m */; };
+		7DE7EC711B969FE200D8955E /* JHThingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC701B969FE200D8955E /* JHThingResult.m */; };
+		7DE7EC741B96A24500D8955E /* JHThingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC731B96A24500D8955E /* JHThingTool.m */; };
+		7DE7EC771B96A55900D8955E /* JHThingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC761B96A55900D8955E /* JHThingView.m */; };
 		7DE87C891B90915D009AB8AB /* JHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C881B90915D009AB8AB /* JHHttpTool.m */; };
 		7DE87C8F1B909257009AB8AB /* JHBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C8E1B909257009AB8AB /* JHBaseTool.m */; };
 		7DE87C931B9093EB009AB8AB /* JHHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C921B9093EB009AB8AB /* JHHomeInfo.m */; };
@@ -163,6 +167,14 @@
 		7DE7EC671B968D2C00D8955E /* JHQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionView.m; sourceTree = "<group>"; };
 		7DE7EC691B96934500D8955E /* JHPraiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPraiseView.h; sourceTree = "<group>"; };
 		7DE7EC6A1B96934500D8955E /* JHPraiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPraiseView.m; sourceTree = "<group>"; };
+		7DE7EC6C1B969EF600D8955E /* JHThingParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingParam.h; sourceTree = "<group>"; };
+		7DE7EC6D1B969EF600D8955E /* JHThingParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingParam.m; sourceTree = "<group>"; };
+		7DE7EC6F1B969FE200D8955E /* JHThingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingResult.h; sourceTree = "<group>"; };
+		7DE7EC701B969FE200D8955E /* JHThingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingResult.m; sourceTree = "<group>"; };
+		7DE7EC721B96A24500D8955E /* JHThingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingTool.h; sourceTree = "<group>"; };
+		7DE7EC731B96A24500D8955E /* JHThingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingTool.m; sourceTree = "<group>"; };
+		7DE7EC751B96A55900D8955E /* JHThingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThingView.h; sourceTree = "<group>"; };
+		7DE7EC761B96A55900D8955E /* JHThingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThingView.m; sourceTree = "<group>"; };
 		7DE87C871B90915D009AB8AB /* JHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHttpTool.h; sourceTree = "<group>"; };
 		7DE87C881B90915D009AB8AB /* JHHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHttpTool.m; sourceTree = "<group>"; };
 		7DE87C8D1B909257009AB8AB /* JHBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBaseTool.h; sourceTree = "<group>"; };
@@ -386,6 +398,8 @@
 				7DE7EC671B968D2C00D8955E /* JHQuestionView.m */,
 				7DE7EC691B96934500D8955E /* JHPraiseView.h */,
 				7DE7EC6A1B96934500D8955E /* JHPraiseView.m */,
+				7DE7EC751B96A55900D8955E /* JHThingView.h */,
+				7DE7EC761B96A55900D8955E /* JHThingView.m */,
 				7DE514841B914B0B00C5C501 /* CircularLoaderView.h */,
 				7DE514851B914B0B00C5C501 /* CircularLoaderView.m */,
 				7DE514861B914B0B00C5C501 /* CustomImageView.h */,
@@ -558,6 +572,8 @@
 				7DE958BA1B92B78B009FAB30 /* JHReadingTool.m */,
 				7DE7EC631B9689A200D8955E /* JHQuestionTool.h */,
 				7DE7EC641B9689A200D8955E /* JHQuestionTool.m */,
+				7DE7EC721B96A24500D8955E /* JHThingTool.h */,
+				7DE7EC731B96A24500D8955E /* JHThingTool.m */,
 			);
 			path = HttpTool;
 			sourceTree = "<group>";
@@ -606,6 +622,10 @@
 			children = (
 				7DE87C9D1B90950A009AB8AB /* JHThingInfo.h */,
 				7DE87C9E1B90950A009AB8AB /* JHThingInfo.m */,
+				7DE7EC6C1B969EF600D8955E /* JHThingParam.h */,
+				7DE7EC6D1B969EF600D8955E /* JHThingParam.m */,
+				7DE7EC6F1B969FE200D8955E /* JHThingResult.h */,
+				7DE7EC701B969FE200D8955E /* JHThingResult.m */,
 			);
 			path = Thing;
 			sourceTree = "<group>";
@@ -768,6 +788,7 @@
 				7DE87CAF1B909823009AB8AB /* JHHomeResult.m in Sources */,
 				7DE958C11B92B871009FAB30 /* JHReadingResult.m in Sources */,
 				7D897B6A1B944E8100C6EA71 /* JHCommonLabelItem.m in Sources */,
+				7DE7EC771B96A55900D8955E /* JHThingView.m in Sources */,
 				7DE1A3981B91DA4100DC9A07 /* MBProgressHUD+JH.m in Sources */,
 				7DE2F2971B902D4600F287B7 /* AppConst.m in Sources */,
 				7DE7EC5F1B96885800D8955E /* JHQuestionParam.m in Sources */,
@@ -788,6 +809,7 @@
 				7D7E82FE1B92D71B0070BAFB /* JHReadingAuthorView.m in Sources */,
 				7D897B641B944B2C00C6EA71 /* JHCommonGroup.m in Sources */,
 				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
+				7DE7EC6E1B969EF600D8955E /* JHThingParam.m in Sources */,
 				7DE7EC651B9689A200D8955E /* JHQuestionTool.m in Sources */,
 				7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */,
 				7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */,
@@ -797,6 +819,7 @@
 				7DE87C9F1B90950A009AB8AB /* JHThingInfo.m in Sources */,
 				7DE2F2CB1B90417A00F287B7 /* JHNavigationController.m in Sources */,
 				7DE87C931B9093EB009AB8AB /* JHHomeInfo.m in Sources */,
+				7DE7EC741B96A24500D8955E /* JHThingTool.m in Sources */,
 				7D7E82EF1B92D5770070BAFB /* JHReadingView.m in Sources */,
 				7DE2F2AD1B9036CB00F287B7 /* JHBaseViewController.m in Sources */,
 				7DE2F2D41B906B0E00F287B7 /* JHHomeView.m in Sources */,
@@ -805,6 +828,7 @@
 				7DE2F2C81B9040EF00F287B7 /* JHPersonalViewController.m in Sources */,
 				7DE2F2C11B903FA900F287B7 /* JHThingViewController.m in Sources */,
 				7DE87CAC1B90980E009AB8AB /* JHHomeParam.m in Sources */,
+				7DE7EC711B969FE200D8955E /* JHThingResult.m in Sources */,
 				7DE87C971B90945C009AB8AB /* JHReadingInfo.m in Sources */,
 				7D897B581B944A0400C6EA71 /* JHAboutViewController.m in Sources */,
 				7DE7EC6B1B96934500D8955E /* JHPraiseView.m in Sources */,
