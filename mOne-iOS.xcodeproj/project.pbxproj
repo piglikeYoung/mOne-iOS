@@ -45,6 +45,11 @@
 		7DE514881B914B0B00C5C501 /* CircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE514851B914B0B00C5C501 /* CircularLoaderView.m */; };
 		7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE514871B914B0B00C5C501 /* CustomImageView.m */; };
 		7DE5148C1B915DD600C5C501 /* Century Gothic Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7DE5148B1B915DD600C5C501 /* Century Gothic Bold.TTF */; };
+		7DE7EC5F1B96885800D8955E /* JHQuestionParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC5E1B96885800D8955E /* JHQuestionParam.m */; };
+		7DE7EC621B96886E00D8955E /* JHQuestionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC611B96886E00D8955E /* JHQuestionResult.m */; };
+		7DE7EC651B9689A200D8955E /* JHQuestionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC641B9689A200D8955E /* JHQuestionTool.m */; };
+		7DE7EC681B968D2C00D8955E /* JHQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC671B968D2C00D8955E /* JHQuestionView.m */; };
+		7DE7EC6B1B96934500D8955E /* JHPraiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7EC6A1B96934500D8955E /* JHPraiseView.m */; };
 		7DE87C891B90915D009AB8AB /* JHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C881B90915D009AB8AB /* JHHttpTool.m */; };
 		7DE87C8F1B909257009AB8AB /* JHBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C8E1B909257009AB8AB /* JHBaseTool.m */; };
 		7DE87C931B9093EB009AB8AB /* JHHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE87C921B9093EB009AB8AB /* JHHomeInfo.m */; };
@@ -148,6 +153,16 @@
 		7DE514861B914B0B00C5C501 /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
 		7DE514871B914B0B00C5C501 /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		7DE5148B1B915DD600C5C501 /* Century Gothic Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic Bold.TTF"; sourceTree = "<group>"; };
+		7DE7EC5D1B96885800D8955E /* JHQuestionParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHQuestionParam.h; sourceTree = "<group>"; };
+		7DE7EC5E1B96885800D8955E /* JHQuestionParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionParam.m; sourceTree = "<group>"; };
+		7DE7EC601B96886E00D8955E /* JHQuestionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHQuestionResult.h; sourceTree = "<group>"; };
+		7DE7EC611B96886E00D8955E /* JHQuestionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionResult.m; sourceTree = "<group>"; };
+		7DE7EC631B9689A200D8955E /* JHQuestionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHQuestionTool.h; sourceTree = "<group>"; };
+		7DE7EC641B9689A200D8955E /* JHQuestionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionTool.m; sourceTree = "<group>"; };
+		7DE7EC661B968D2C00D8955E /* JHQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHQuestionView.h; sourceTree = "<group>"; };
+		7DE7EC671B968D2C00D8955E /* JHQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHQuestionView.m; sourceTree = "<group>"; };
+		7DE7EC691B96934500D8955E /* JHPraiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPraiseView.h; sourceTree = "<group>"; };
+		7DE7EC6A1B96934500D8955E /* JHPraiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPraiseView.m; sourceTree = "<group>"; };
 		7DE87C871B90915D009AB8AB /* JHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHttpTool.h; sourceTree = "<group>"; };
 		7DE87C881B90915D009AB8AB /* JHHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHttpTool.m; sourceTree = "<group>"; };
 		7DE87C8D1B909257009AB8AB /* JHBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBaseTool.h; sourceTree = "<group>"; };
@@ -367,6 +382,10 @@
 				7D7E82EE1B92D5770070BAFB /* JHReadingView.m */,
 				7D7E82FC1B92D71B0070BAFB /* JHReadingAuthorView.h */,
 				7D7E82FD1B92D71B0070BAFB /* JHReadingAuthorView.m */,
+				7DE7EC661B968D2C00D8955E /* JHQuestionView.h */,
+				7DE7EC671B968D2C00D8955E /* JHQuestionView.m */,
+				7DE7EC691B96934500D8955E /* JHPraiseView.h */,
+				7DE7EC6A1B96934500D8955E /* JHPraiseView.m */,
 				7DE514841B914B0B00C5C501 /* CircularLoaderView.h */,
 				7DE514851B914B0B00C5C501 /* CircularLoaderView.m */,
 				7DE514861B914B0B00C5C501 /* CustomImageView.h */,
@@ -537,6 +556,8 @@
 				7DE87CA11B9095A6009AB8AB /* JHHomeTool.m */,
 				7DE958B91B92B78B009FAB30 /* JHReadingTool.h */,
 				7DE958BA1B92B78B009FAB30 /* JHReadingTool.m */,
+				7DE7EC631B9689A200D8955E /* JHQuestionTool.h */,
+				7DE7EC641B9689A200D8955E /* JHQuestionTool.m */,
 			);
 			path = HttpTool;
 			sourceTree = "<group>";
@@ -572,6 +593,10 @@
 			children = (
 				7DE87C991B9094C4009AB8AB /* JHQuestionInfo.h */,
 				7DE87C9A1B9094C4009AB8AB /* JHQuestionInfo.m */,
+				7DE7EC5D1B96885800D8955E /* JHQuestionParam.h */,
+				7DE7EC5E1B96885800D8955E /* JHQuestionParam.m */,
+				7DE7EC601B96886E00D8955E /* JHQuestionResult.h */,
+				7DE7EC611B96886E00D8955E /* JHQuestionResult.m */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -745,6 +770,7 @@
 				7D897B6A1B944E8100C6EA71 /* JHCommonLabelItem.m in Sources */,
 				7DE1A3981B91DA4100DC9A07 /* MBProgressHUD+JH.m in Sources */,
 				7DE2F2971B902D4600F287B7 /* AppConst.m in Sources */,
+				7DE7EC5F1B96885800D8955E /* JHQuestionParam.m in Sources */,
 				7DE2F2921B9012E900F287B7 /* main.m in Sources */,
 				7DE87CA61B90969D009AB8AB /* JHBaseParam.m in Sources */,
 				7D897B551B9449D500C6EA71 /* JHSettingsViewController.m in Sources */,
@@ -758,9 +784,11 @@
 				7D897B651B944B2C00C6EA71 /* JHCommonItem.m in Sources */,
 				7DE2F29F1B902EBC00F287B7 /* NSString+Extension.m in Sources */,
 				7DE2F2A61B902FAA00F287B7 /* NSTimer+EZ_Helper.m in Sources */,
+				7DE7EC681B968D2C00D8955E /* JHQuestionView.m in Sources */,
 				7D7E82FE1B92D71B0070BAFB /* JHReadingAuthorView.m in Sources */,
 				7D897B641B944B2C00C6EA71 /* JHCommonGroup.m in Sources */,
 				7DE2F2C51B9040DE00F287B7 /* JHQuestionViewController.m in Sources */,
+				7DE7EC651B9689A200D8955E /* JHQuestionTool.m in Sources */,
 				7DE514891B914B0B00C5C501 /* CustomImageView.m in Sources */,
 				7DE87CA91B909749009AB8AB /* JHBaseResult.m in Sources */,
 				7DE2F2CE1B90496F00F287B7 /* JHTabBarController.m in Sources */,
@@ -779,11 +807,13 @@
 				7DE87CAC1B90980E009AB8AB /* JHHomeParam.m in Sources */,
 				7DE87C971B90945C009AB8AB /* JHReadingInfo.m in Sources */,
 				7D897B581B944A0400C6EA71 /* JHAboutViewController.m in Sources */,
+				7DE7EC6B1B96934500D8955E /* JHPraiseView.m in Sources */,
 				7DE87C9B1B9094C4009AB8AB /* JHQuestionInfo.m in Sources */,
 				7D897B521B9444D700C6EA71 /* JHBaseTableViewController.m in Sources */,
 				7DE2F2A01B902EBC00F287B7 /* UIBarButtonItem+Extension.m in Sources */,
 				7D897B6B1B944E8100C6EA71 /* JHCommonSwitchItem.m in Sources */,
 				7DE2F2A91B90300500F287B7 /* UIView+Extension.m in Sources */,
+				7DE7EC621B96886E00D8955E /* JHQuestionResult.m in Sources */,
 				7DE958BB1B92B78B009FAB30 /* JHReadingTool.m in Sources */,
 				7DE2F2BC1B903F4800F287B7 /* JHReadingViewController.m in Sources */,
 				7DE2F2A31B902F8A00F287B7 /* Foundation+Log.m in Sources */,

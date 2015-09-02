@@ -13,7 +13,7 @@
 @interface JHReadingTool : JHBaseTool
 
 /**
- *  获取首页数据
+ *  获取文章数据
  *
  */
 + (void)readingContentWithParam:(JHReadingParam *)param success:(void (^)(JHReadingResult *result))success failure:(void (^)(NSError *error))failure;

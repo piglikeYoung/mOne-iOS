@@ -90,9 +90,9 @@
     if (webView.scrollView.subviews.count < 4) {// 小于4说明还没有添加文章底部的作者详情 view
         // webView 底部添加一个作者的描述视图
         readingAuthorView = [[JHReadingAuthorView alloc] init];
-        readingAuthorView.tag = 20;
+        readingAuthorView.tag = JHBottomViewTag;
     } else {
-        readingAuthorView = (JHReadingAuthorView *)[webView.scrollView viewWithTag:20];
+        readingAuthorView = (JHReadingAuthorView *)[webView.scrollView viewWithTag:JHBottomViewTag];
     }
     
     // 赋值的时候计算了readingAuthorView的frame

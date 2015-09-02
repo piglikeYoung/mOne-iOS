@@ -91,6 +91,11 @@
 #define DawnWebViewBGColorName @"#f0f0f0"
 #define NightWebViewTextColorName @"#888888"
 #define DawnWebViewTextColorName @"#333333"
+#define JHBottomViewTag 20
+
+//--------------------问题界面宏---------------------
+#define JHTopViewTag 10
+#define JHTopViewH 34
 
 //--------------------个人界面宏----------------------
 #define JHTableViewCellSeparatorDawnColor JHColor(200, 199, 204) // #C8C7CC
@@ -98,6 +103,8 @@
 #define JHSettingDawnViewBGColor JHColor(235, 235, 235) // #EBEBEB
 #define JHDawnCellHeaderTextColor JHColor(85, 85, 85)// #555555
 #define JHNightCellHeaderTextColor JHColor(75, 75, 75)// #4B4B4B
+
+
 
 
 
